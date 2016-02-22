@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "car": 
+      [
+        { 
+          "brand": "",
+          "category": "car",
+          "color": "",
+          "comments": "",
+          "condition": "",
+          "doors": "",
+          "driveTrain": "",
+          "engineDisplacement": "",
+          "engineType": "",
+          "extras": "",
+          "fuelType": "",
+          "id": "",
+          "images": 
+          [
+            {"image": "http://automodels.net/img/car_model_default.png"},
+            {"image": "http://www.puertorent.cl/images/car-default.png"}
+          ],
+          "layout": "",
+          "mileage": "",
+          "modelName": "",
+          "modifications": "",
+          "plate": "",
+          "powerOutput": "",
+          "price": "",
+          "rebuilt": "",
+          "sellerId": "",
+          "sellerName": "",
+          "transmition": "",
+          "year": ""
+        }
+      ]
+    },
+    {
+      "motorcycle": 
+      [
+        {
+          "brand": "",
+          "category": "motorcycle",
+          "color": "",
+          "comments": "",
+          "condition": "",
+          "engineDisplacement": "",
+          "engineType": "",
+          "extras": "",
+          "fuelType": "",
+          "id": "",
+          "images": 
+          [
+            {"image": "http://icons.iconarchive.com/icons/icons8/android/512/Transport-Motorcycle-icon.png"},
+            {"image": "https://d13yacurqjgara.cloudfront.net/users/49396/screenshots/1769551/motorcycle.png"}
+          ],
+          "layout": "",
+          "mileage": "",
+          "modelName": "",
+          "modifications": "",
+          "plate": "",
+          "powerOutput": "",
+          "price": "",
+          "rebuilt": "",
+          "sellerId": "",
+          "sellerName": "",
+          "transmition": "",
+          "year": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,19 +1,17 @@
-/*dependencies*/
 var express = require('express'),
-		app = express(),
-		bodyParser = require('body-parser'),
-		mongoose = require('mongoose');
+    app = express(),
+    bodyParser = require('body-parser');
+    
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/cars');
 
-mongoose.connect('mongodb:localhost/car');
-
-/*middlewares*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+    extended: true
 }));
 
-var carRoutes = require('./routes/car.route.js');
+var carRoute = require('./routes/car.route.js')(app);
 
-var server = app.listen(4003, function () {
-	console.log('server running at http://127.0.0.1:4003/');
+app.listen(4002, function () {
+   console.log('CARS listening on port 4002');
 });

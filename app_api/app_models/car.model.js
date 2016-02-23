@@ -28,7 +28,7 @@ var CarSchema = new Schema({
   },
   engineType: String,
   extras: {
-    /*car extras go in here*/
+    type: String
   },
   fuelType: {
     type: String,
@@ -45,7 +45,7 @@ var CarSchema = new Schema({
     required: true
   },
   modifications: {
-    /*Modifications go in here*/
+    type: String
   },
   plate: {
    type: Number,
@@ -66,5 +66,5 @@ var CarSchema = new Schema({
   }
 });
 
-var carModel = mongoose.model('car', CarSchema);
+var carModel = mongoose.model('Car', CarSchema);
 module.export = carModel;

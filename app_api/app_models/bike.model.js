@@ -23,7 +23,7 @@ var BikeSchema = new Schema({
   },
   engineType: String,
   extras: {
-    /*car extras go in here*/
+    type: String
   },
   images: Array,
   layout: String,
@@ -36,12 +36,12 @@ var BikeSchema = new Schema({
     required: true
   },
   modifications: {
-    /*Modifications go in here*/
+    type: String
   },
   plate: {
    type: Number,
    unique: true 
-  },,
+  },
   powerOutput: Number,
   price: {
     type: Number,
@@ -57,5 +57,5 @@ var BikeSchema = new Schema({
   }
 });
 
-var bikeModel = mongoose.model('bike', BikeSchema);
+var bikeModel = mongoose.model('Bike', BikeSchema);
 module.export = bikeModel;

@@ -44,7 +44,7 @@ module.exports = function (app) {
       }
       if (user) {
         _.merge(user, req.body);
-        User.save(function (err) {
+        user.save(function (err) {
           if (err) {
             res.json({info: 'error during user update', error: err});
           }

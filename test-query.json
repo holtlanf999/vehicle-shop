@@ -1,1 +1,102 @@
-{"brand": "Toyota", "category": "Cars", "color": "white", "comments": "car is in very good shape, new paint and wheels, recently overhauled", "condition": "used", "dateCreated": 1456200380, "doors": 4, "driveTrain": "Manual", "engineDisplacement": 3000, "engineType": "Inline 6", "extras": "stock", "fuelType": "petrol", "images": ["http://www.stanceiseverything.com/wp-content/uploads/2010/12/supra_mk4_1.jpg", "http://i55.tinypic.com/jqkk29.jpg"], "layout": "coupe", "mileage": 245000,"brandModel": "supra mk3", "modifications": "not modified", "plate": 235485, "powerOutput": 270, "price": 6200, "rebuilt": true, "sellerId": 984261746006200165, "sellerName": "Max Payne", "transmition": "manual", "year": 1987}
+/*Car query*/
+{
+  "brand": "Toyota",
+  "category": "Cars",
+  "color": "white",
+  "comments": "car is in very good shape, new paint and wheels, recently overhauled",
+  "condition": "used",
+  "dateCreated": 1456200380,
+  "doors": 4,
+  "driveTrain": "Manual",
+  "engineDisplacement": 3000,
+  "engineType": "Inline 6",
+  "extras": "stock",
+  "fuelType": "petrol",
+  "images": 
+  [
+    "http://www.stanceiseverything.com/wp-content/uploads/2010/12/supra_mk4_1.jpg",
+    "http://i55.tinypic.com/jqkk29.jpg"
+  ],
+  "layout": "coupe",
+  "mileage": 245000,
+  "brandModel": "supra mk3",
+  "modifications": "not modified",
+  "plate": 235485,
+  "powerOutput": 270,
+  "price": 6200,
+  "rebuilt": true,
+  "sellerId": 984261746006200165,
+  "sellerName": "Ian Gabriel Murillo",
+  "transmition": "manual",
+  "year": 1987
+},
+{
+  "brand": "BMW",
+  "category": "Cars",
+  "color": "Blue",
+  "comments": "Car is intact, 0/60 in 3.2 sec, looking for a newer model of the same branch",
+  "condition": "used",
+  "dateCreated": 1456242185,
+  "doors": 2,
+  "driveTrain": "RWD",
+  "engineDisplacement": 3200,
+  "engineType": "Inline 6",
+  "extras": "Brembo brakes double calipers in all 4 wheels, megasquirt 2, Turbofreaks package stage 4, forged engine",
+  "fuelType": "petrol",
+  "images": 
+  [
+    "http://image.superstreetonline.com/f/24875929+w+h+q80+re0+cr1/eurp_0910_01_o%2B2004_bmw_m3%2Bfront_passenger_side.jpg",
+    "https://www.google.com/search?espv=2&tbm=isch&q=bmw+m3+turbo+freaks&spell=1&sa=X&ved=0ahUKEwiqmNjYnY7LAhUGXh4KHUqBBi4QBQgaKAA&dpr=2&biw=1600&bih=785#imgrc=juJ8Y27Zaiz3dM%3A",
+    "http://image.superstreetonline.com/f/24875929+w+h+q80+re0+cr1/eurp_0910_01_o%2B2004_bmw_m3%2Bfront_passenger_side.jpg"
+  ],
+  "layout": "coupe",
+  "mileage": 82000,
+  "brandModel": "M3 e46",
+  "modifications": "Heavily modified",
+  "plate": 948569,
+  "powerOutput": 750,
+  "price": 45000,
+  "rebuilt": false,
+  "sellerId": "56cc7c84c1204d040ffc3c0e",
+  "sellerName": "Lanford Gabriel Murillo",
+  "transmition": "manual",
+  "year": 2004
+}
+
+/*User query*/
+{
+	"name": "Lanford Gabriel Murillo",
+	"email": "holtlanf999@mymail.com",
+	"phone": 83168552,
+	 "age": 23,
+	 "password": "a851308387ed93a0548c48b6150429aa"
+}
+
+/*Bike query*/
+{
+  "brand": "Yamaha",
+  "category": "Bike",
+  "Color": "black, grey and blue",
+  "condition": "new",
+  "dateCreated": "1456243364",
+  "engineDisplacement": 1200,
+  "engineType": "1199cc liquid-cooled inline 2-cylinder; DOHC; 8 valves",
+  "extras": "factory stock",
+  "images": 
+  [
+    "http://cdn.yamaha-motor.eu/product_assets/2015/XTZ1200/950-75/2015-Yamaha-XT1200Z-Super-Tenere-EU-Race-Blu-Studio-007.jpg", 
+    "http://cdn.yamaha-motor.eu/product_assets/2015/XTZ1200/950-75/2015-Yamaha-XT1200Z-Super-Tenere-EU-Race-Blu-Studio-001.jpg"
+  ],
+  "layout": "enduro",
+  "mileage": 0,
+  "brandModel": "XT 1200 Z Super Tenere",
+  "modidications": "no",
+  "plate": "",
+  "powerOutput": 180,
+  "price": 15000,
+  "rebuilt": false,
+  "sellerId": 129878678545,
+  "sellerName": "Lanford Gabriel Murillo",
+  "transmition": "6-speed; multi-plate wet clutch",
+  "year": 2016
+}

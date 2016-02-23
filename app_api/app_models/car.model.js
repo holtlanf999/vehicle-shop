@@ -67,4 +67,4 @@ var CarSchema = new Schema({
 });
 
 var carModel = mongoose.model('Car', CarSchema);
-module.export = carModel;
+module.exports = carModel;

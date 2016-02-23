@@ -58,4 +58,4 @@ var BikeSchema = new Schema({
 });
 
 var bikeModel = mongoose.model('Bike', BikeSchema);
-module.export = bikeModel;
+module.exports = bikeModel;

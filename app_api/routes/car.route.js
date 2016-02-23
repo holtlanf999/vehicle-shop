@@ -44,7 +44,7 @@ module.exports = function (app) {
       }
       if (car) {
         _.merge(car, req.body);
-        Car.save(function (err) {
+        car.save(function (err) {
           if (err) {
             res.json({info: 'error during car update', error: err});
           }

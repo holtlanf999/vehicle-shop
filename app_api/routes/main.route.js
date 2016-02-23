@@ -17,7 +17,7 @@ module.exports = function (app) {
           if (!error && response.statusCode === 200) {
             callback(null, body);
           } else {
-            carllback(response.statusCode);
+            callback(response.statusCode);
           }
         });
       },
@@ -30,7 +30,7 @@ module.exports = function (app) {
           if (!error && response.statusCode === 200) {
             callback(null, body);
           } else {
-            carllback(response.statusCode);
+            callback(response.statusCode);
           }
         });
       },
@@ -43,7 +43,7 @@ module.exports = function (app) {
           if (!error && response.statusCode === 200) {
             callback(null, body);
           } else {
-            carllback(response.statusCode);
+            callback(response.statusCode);
           }
         });
       }

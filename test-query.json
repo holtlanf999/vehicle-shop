@@ -57,7 +57,7 @@
   "powerOutput": 750,
   "price": 45000,
   "rebuilt": false,
-  "sellerId": "14352532356435145",
+  "sellerId": "56cc7c84c1204d040ffc3c0e",
   "sellerName": "Lanford Gabriel Murillo",
   "transmition": "manual",
   "year": 2004
@@ -65,18 +65,18 @@
 
 /*User query*/
 {
-	"name": "Lanford Gabriel Murillo",
-	"email": "holtlanf999@mymail.com",
-	"phone": 83168552,
-	 "age": 23,
-	 "password": "a851308387ed93a0548c48b6150429aa"
+  "name": "Lanford Gabriel Murillo",
+  "email": "holtlanf999@mymail.com",
+  "phone": 83168552,
+   "age": 23,
+   "password": "a851308387ed93a0548c48b6150429aa"
 },
 {
   "name": "Ian Gabriel Murillo",
   "email": "ian_512@mymail.com",
   "phone": 22271844,
-  "age": 13,
-  "password": "a851308387ed93a0548c48b6150429aa"
+   "age": 12,
+   "password": "a851308387ed93a0548c48b6150429aa"
 }
 
 /*Bike query*/
@@ -105,5 +105,32 @@
   "sellerId": 129878678545,
   "sellerName": "Lanford Gabriel Murillo",
   "transmition": "6-speed; multi-plate wet clutch",
+  "year": 2016
+},
+{
+  "brand": "BMW",
+  "category": "Bike",
+  "Color": "White and blue",
+  "condition": "new",
+  "dateCreated": "1456243576",
+  "engineDisplacement": 1000,
+  "engineType": "4 Cyl inline",
+  "extras": "factory stock",
+  "images": 
+  [
+    "http://i0.wp.com/www.asphaltandrubber.com/wp-content/uploads/2014/09/2015-bmw-s1000rr.jpg", 
+    "http://motorcycle.com.vsassets.com/blog/wp-content/uploads/2014/09/093014-2015-bmw-s1000rr-P90162325_highRes.jpg"
+  ],
+  "layout": "Superbike",
+  "mileage": 0,
+  "brandModel": "S1000RR",
+  "modidications": "no",
+  "plate": "345672",
+  "powerOutput": 190,
+  "price": 35000,
+  "rebuilt": false,
+  "sellerId": 3456545677659876,
+  "sellerName": "Lanford Gabriel Murillo",
+  "transmition": "6-speed",
   "year": 2016
 }

@@ -57,7 +57,7 @@
   "powerOutput": 750,
   "price": 45000,
   "rebuilt": false,
-  "sellerId": "56cc7c84c1204d040ffc3c0e",
+  "sellerId": "14352532356435145",
   "sellerName": "Lanford Gabriel Murillo",
   "transmition": "manual",
   "year": 2004
@@ -70,6 +70,13 @@
 	"phone": 83168552,
 	 "age": 23,
 	 "password": "a851308387ed93a0548c48b6150429aa"
+},
+{
+  "name": "Ian Gabriel Murillo",
+  "email": "ian_512@mymail.com",
+  "phone": 22271844,
+  "age": 13,
+  "password": "a851308387ed93a0548c48b6150429aa"
 }
 
 /*Bike query*/

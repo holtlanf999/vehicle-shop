@@ -1,0 +1,10 @@
+.login-label,
+.login-input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.login-btn {
+  margin: 1rem auto;
+}

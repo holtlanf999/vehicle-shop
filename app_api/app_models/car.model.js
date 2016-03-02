@@ -21,7 +21,7 @@ var CarSchema = new Schema({
     type: Number,
     required: true,
   },
-  driveTrain: String,
+  bodyType: String,
   engineDisplacement: {
     type: Number,
     required: true,

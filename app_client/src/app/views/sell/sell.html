@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-md-12">
       <form action="submit-vehicle">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-md-offset-2 col-sm-6">
           <label class="sell-label text-center" for="category">Category</label>
           <select class="form-control" name="category" id="category">
             <option value="motorcycle">Motorcycle</option>
@@ -38,14 +38,16 @@
           </select>
 
           <label class="sell-label text-center" for="doors">Doors</label>
-          <select class=" form-control" name="doors" id="doors">
-            <option value="1">1 Door</option>
-            <option value="2">2 Doors</option>
-            <option value="3">3 Doors</option>
-            <option value="4">4 Doors</option>
-            <option value="5">5 Doors</option>
-            <option value="6">6 Doors</option>
-          </select>
+          <div class="input-group">
+            <select class=" form-control" name="doors" id="doors">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <div class="input-group-addon">Doors</div>
+          </div>
 
           <label class="sell-label text-center" for="drive-train">Drive Train</label>
           <select class=" form-control" name="drive-train" id="drive-train">
@@ -65,10 +67,119 @@
           <label class="sell-label text-center" for="transmition">Transmition</label>
           <input class="form-control" type="text" name="transmition" placeholder="Transmition">
 
-          <label class="sell-label text-center" for="Extras">Extras</label>
-          <textarea class=" form-control" name="extras" id="extras" cols="30" rows="6" placeholder="Extras"></textarea>
+          <label class="sell-label text-center" for="extras">Extras</label>
+          <fieldset name="extras">
+            <div class="col-md-6">
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="power-steering" value="power steering">
+                <label class="sell-checkbox-label" for="power-steering">Power Steering</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="tinted-glass" value="tinted glass">
+                <label class="sell-checkbox-label" for="tinted-glass">Tinted glass</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="power-mirrors" value="power mirrors">
+                <label class="sell-checkbox-label" for="power-mirrors">Power Mirrors</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="ac" value="ac">
+                <label class="sell-checkbox-label" for="ac">A/C</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="luxury-rims" value="luxury rims">
+                <label class="sell-checkbox-label" for="luxury-rims">Luxury Rims</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="halogen-lights" value="halogen lights">
+                <label class="sell-checkbox-label" for="halogen-lights">Halogen Lights</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="cruise-control" value="cruise control">
+                <label class="sell-checkbox-label" for="cruise-control">Cruise Control</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="electronic-stability-control" value="electronic stability control">
+                <label class="sell-checkbox-label" for="electronic-stability-control">ESC</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="reversing-camera" value="reversing camera">
+                <label class="sell-checkbox-label" for="reversing-camera">Reversing Camera</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="steering-wheel-radio-controls" value="steering wheel radio controls">
+                <label class="sell-checkbox-label" for="steering-wheel-radio-controls">Steering Wheel Controls</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="memory-seats" value="memory seats">
+                <label class="sell-checkbox-label" for="memory-seats">Memory Seats</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="travel-computer" value="travel computer">
+                <label class="sell-checkbox-label" for="travel-computer">Travel Computer</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="rain-sensor" value="rain sensor">
+                <label class="sell-checkbox-label" for="rain-sensor">Rain Sensor</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="airbags" value="airbags">
+                <label class="sell-checkbox-label" for="airbags">Airbags</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="alarm" value="alarm">
+                <label class="sell-checkbox-label" for="alarm">Alarm</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="defroster" value="defroster">
+                <label class="sell-checkbox-label" for="defroster">Defroster</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="turbo" value="turbo">
+                <label class="sell-checkbox-label" for="turbo">turbo</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="reversing-sensors" value="reversing sensors">
+                <label class="sell-checkbox-label" for="reversing-sensors">Reversing Sensors</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="start-button" value="start button">
+                <label class="sell-checkbox-label" for="start-button">Start Button</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="smart-key" value="smart key">
+                <label class="sell-checkbox-label" for="smart-key">Smart Key</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="adjustable-steering" value="adjustable steering">
+                <label class="sell-checkbox-label" for="adjustable-steering">Adjustable Steering</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="power-seats" value="power seats">
+                <label class="sell-checkbox-label" for="power-seats">Power Seats</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="power-windows" value="power windows">
+                <label class="sell-checkbox-label" for="power-windows">Power Windows</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="abs-breaks" value="abs breaks">
+                <label class="sell-checkbox-label" for="abs-breaks">ABS Breaks</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="sunroof" value="sunroof">
+                <label class="sell-checkbox-label" for="sunroof">Sunroof</label>
+              </div>
+              <div>
+                <input class="checkbox-inline" type="checkbox" name="panoramic-roof" value="panoramic roof">
+                <label class="sell-checkbox-label" for="panoramic-roof">Panoramic Roof</label>
+              </div>
+            </div>
+          </fieldset>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
           <select class=" form-control" name="fuel-type" id="fuel-type">
             <option value="gasoline">Gasoline</option>
@@ -80,11 +191,26 @@
           <label class="sell-label text-center" for="images">Images</label>
           <input class="form-control" type="file" name="images">
 
-          <label class="sell-label text-center" for="layout">Layout</label>
-          <input class="form-control" type="text" name="layout" placeholder="Layout">
+          <label class="sell-label text-center" for="body-style">Body Style</label>
+          <select class="form-control" name="body-style" id="Body Style">
+            <option value="suv">suv</option>
+            <option value="truck">truck</option>
+            <option value="sedan">sedan</option>
+            <option value="van">van</option>
+            <option value="coupe">coupe</option>
+            <option value="wagon">wagon</option>
+            <option value="convertible">convertible</option>
+            <option value="sports car">sports car</option>
+            <option value="crossover">crossover</option>
+            <option value="luxury">luxury</option>
+            <option value="hatchback">hatchback</option>
+          </select>
 
-          <label class="sell-label text-center" for="mileage">mileage</label>
-          <input class="form-control" type="number" name="mileage" placeholder="mileage">
+          <label class="sell-label text-center" for="mileage">Mileage</label>
+          <div class="input-group">
+          <input class="form-control" type="number" name="mileage" placeholder="Mileage">
+          <div class="input-group-addon">Miles</div>
+          </div>
 
           <label class="sell-label text-center" for="modifications">Vehicle Modifications</label>
           <textarea class=" form-control" name="extras" id="modifications" cols="30" rows="6" placeholder="Vehicle Modifications"></textarea>
@@ -92,12 +218,17 @@
           <label class="sell-label text-center" for="plate">Car Plate</label>
           <input class="form-control" type="text" name="plate" placeholder="Car Plate">
 
-          <label class="sell-label text-center" for="power">Power Output (Horse Power)</label>
-          <input class="form-control" type="text" name="power" placeholder="Power Output (Horse Power)">
+          <label class="sell-label text-center" for="power">Power Output</label>
+          <div class="input-group">
+            <input class="form-control" type="text" name="power" placeholder="Power Output">
+            <div class="input-group-addon">HP</div>
+          </div>
 
           <label class="sell-label text-center" for="price">Vehicle Price</label>
-          <input class="form-control" type="number" name="price" placeholder="Vehicle Price">
-
+          <div class="input-group">
+            <input class="form-control" type="number" name="price" placeholder="Vehicle Price">
+            <div class="input-group-addon">$</div>
+          </div>
           <label class="sell-label text-center" for="rebuilt">Rebuilt</label>
           <select class=" form-control" name="rebuilt" id="rebuilt">
             <option value="true">Yes</option>

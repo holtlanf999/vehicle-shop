@@ -26,7 +26,7 @@ var BikeSchema = new Schema({
     type: String
   },
   images: Array,
-  layout: String,
+  bodyType: String,
   mileage: {
     type: Number,
     required: true,

@@ -1,22 +1,50 @@
 .action-buy,
 .action-sell {
   background-size: cover;
+  background-color: rgba(20, 20, 20, 0.4);
+  border: 2px solid #404040;
   display: inline-block;
+  margin-top: 10rem;
   width: 50%;
+
   a {
     color: #fff;
   }
+
   h3 {
-    padding: 8rem 0;
+    font-size: 6rem;
   }
 }
 
 .action-buy{
-    background-image: url('../assets/images/buy.jpg');
-    float: left;
+  // background-image: url('../assets/images/buy.jpg');
+  border-radius: 2rem 0 0 2rem;
+  float: left;
+
+  & .overlay {
+    border-radius: 2rem 0 0 2rem;
+  }
 }
 
 .action-sell {
-  background-image: url('../assets/images/sell.jpg');
+  // background-image: url('../assets/images/sell.jpg');
+  border-radius: 0 2rem 2rem 0;
   float: rigth;
+
+  & .overlay {
+    border-radius: 0 2rem 2rem 0;
+  }
 }
+
+.overlay {
+  height: 100%;
+  overflow: hidden;
+  padding: 10rem 0;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba(217, 125, 37, 0.6);
+  }
+
+}
+

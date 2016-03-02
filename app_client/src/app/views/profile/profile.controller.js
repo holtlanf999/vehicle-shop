@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function ProfileController() {
-    var vm = this;
+    // var vm = this;
   }
 })();

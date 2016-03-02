@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function CategoriesController() {
-    var vm = this;
+    // var vm = this;
   }
 })();

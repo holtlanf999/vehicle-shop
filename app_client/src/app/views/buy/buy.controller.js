@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function BuyController() {
-    var vm = this;
+    // var vm = this;
   }
 })();

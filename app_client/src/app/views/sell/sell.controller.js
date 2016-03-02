@@ -7,6 +7,6 @@
 
   /** @ngInject */
   function SellController() {
-    var vm = this;
+    // var vm = this;
   }
 })();

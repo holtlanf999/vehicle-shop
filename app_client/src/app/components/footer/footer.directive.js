@@ -3,14 +3,14 @@
 
   angular
     .module('appClient')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('mainFooter', mainFooter);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function mainFooter() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
-      controller: NavbarController,
+      templateUrl: 'app/components/footer/footer.html',
+      controller: footerController,
       controllerAs: 'vm',
       bindToController: true
     };
@@ -18,7 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function footerController() {
       // var vm = this;
     }
   }

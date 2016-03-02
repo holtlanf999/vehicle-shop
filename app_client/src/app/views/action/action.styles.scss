@@ -1,0 +1,22 @@
+.action-buy,
+.action-sell {
+  background-size: cover;
+  display: inline-block;
+  width: 50%;
+  a {
+    color: #fff;
+  }
+  h3 {
+    padding: 8rem 0;
+  }
+}
+
+.action-buy{
+    background-image: url('../assets/images/buy.jpg');
+    float: left;
+}
+
+.action-sell {
+  background-image: url('../assets/images/sell.jpg');
+  float: rigth;
+}

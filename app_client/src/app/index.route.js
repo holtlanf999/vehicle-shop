@@ -8,23 +8,29 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('login', {
-        url: '/login',
-        templateUrl: 'app/views/login/login.html',
-        controller: 'LoginController',
-        controllerAs: 'login'
-      })
       .state('register', {
         url: '/register',
         templateUrl: 'app/views/register/register.html',
         controller: 'RegisterController',
         controllerAs: 'register'
       })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'app/views/login/login.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+      })
       .state('action', {
         url: '/',
         templateUrl: 'app/views/action/action.html',
         controller: 'ActionController',
         controllerAs: 'action'
+      })
+      .state('categories', {
+        url: '/categories',
+        templateUrl: 'app/views/categories/categories.html',
+        controller: 'CategoriesController',
+        controllerAs: 'categories'
       })
       .state('buy', {
         url: '/buy',

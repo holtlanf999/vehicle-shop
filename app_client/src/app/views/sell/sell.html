@@ -8,4 +8,109 @@
       <h2 class="text-center">Sell View</h2>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="submit-vehicle">
+        <div class="col-md-6 col-sm-6">
+          <label class="sell-label text-center" for="category">Category</label>
+          <select class="form-control" name="category" id="category">
+            <option value="motorcycle">Motorcycle</option>
+            <option value="Car">Car</option>
+          </select>
+
+          <label class="sell-label text-center" for="vehicle-brand">Brand</label>
+          <input class="form-control" type="text" name="brand" placeholder="Brand">
+
+          <label class="sell-label text-center" for="model">Model</label>
+          <input class="form-control" type="text" name="model" placeholder="Model">
+
+          <label class="sell-label text-center" for="color">Color</label>
+          <input class="form-control" type="color" name="color">
+
+          <label class="sell-label text-center" for="comment">Comment</label>
+          <textarea class="form-control" name="comment" id="comment" cols="30" rows="6" placeholder="Comment"></textarea>
+
+          <label class="sell-label text-center" for="condition">Condition</label>
+          <select class=" form-control" name="condition" id="condition">
+            <option value="new">New</option>
+            <option value="used">Used</option>
+            <option value="wrecked">Wrecked</option>
+          </select>
+
+          <label class="sell-label text-center" for="doors">Doors</label>
+          <select class=" form-control" name="doors" id="doors">
+            <option value="1">1 Door</option>
+            <option value="2">2 Doors</option>
+            <option value="3">3 Doors</option>
+            <option value="4">4 Doors</option>
+            <option value="5">5 Doors</option>
+            <option value="6">6 Doors</option>
+          </select>
+
+          <label class="sell-label text-center" for="drive-train">Drive Train</label>
+          <select class=" form-control" name="drive-train" id="drive-train">
+            <option value="Front Wheel Drive (FWD)">Front Wheel Drive (FWD)</option>
+            <option value="Rear Wheel Drive (RWD)">Rear Wheel Drive (RWD)</option>
+            <option value="All Wheel Drive (AWD)">All Wheel Drive (AWD)</option>
+            <option value="All Terrain (4X4)">All Terrain (4X4)</option>
+            <option value="All Terrain (6X6)">All Terrain (6X6)</option>
+          </select>
+
+          <label class="sell-label text-center" for="engine-type">Engine Type</label>
+          <input class="form-control" type="text" name="engine-type" placeholder="Engine Type">
+
+          <label class="sell-label text-center" for="engine-displacement">Engine Displacement (cc)</label>
+          <input class="form-control" type="number" name="engine-displacement" placeholder="Engine Displacement (cc)">
+
+          <label class="sell-label text-center" for="transmition">Transmition</label>
+          <input class="form-control" type="text" name="transmition" placeholder="Transmition">
+
+          <label class="sell-label text-center" for="Extras">Extras</label>
+          <textarea class=" form-control" name="extras" id="extras" cols="30" rows="6" placeholder="Extras"></textarea>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
+          <select class=" form-control" name="fuel-type" id="fuel-type">
+            <option value="gasoline">Gasoline</option>
+            <option value="diesel">Diesel</option>
+            <option value="hibrid">Hybrid</option>
+            <option value="electric">Electric</option>
+          </select>
+
+          <label class="sell-label text-center" for="images">Images</label>
+          <input class="form-control" type="file" name="images">
+
+          <label class="sell-label text-center" for="layout">Layout</label>
+          <input class="form-control" type="text" name="layout" placeholder="Layout">
+
+          <label class="sell-label text-center" for="mileage">mileage</label>
+          <input class="form-control" type="number" name="mileage" placeholder="mileage">
+
+          <label class="sell-label text-center" for="modifications">Vehicle Modifications</label>
+          <textarea class=" form-control" name="extras" id="modifications" cols="30" rows="6" placeholder="Vehicle Modifications"></textarea>
+
+          <label class="sell-label text-center" for="plate">Car Plate</label>
+          <input class="form-control" type="text" name="plate" placeholder="Car Plate">
+
+          <label class="sell-label text-center" for="power">Power Output (Horse Power)</label>
+          <input class="form-control" type="text" name="power" placeholder="Power Output (Horse Power)">
+
+          <label class="sell-label text-center" for="price">Vehicle Price</label>
+          <input class="form-control" type="number" name="price" placeholder="Vehicle Price">
+
+          <label class="sell-label text-center" for="rebuilt">Rebuilt</label>
+          <select class=" form-control" name="rebuilt" id="rebuilt">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+
+          <label class="sell-label text-center" for="year">Year</label>
+          <input class="form-control" type="number" name="year" placeholder="Year">
+
+          <button class="btn btn-success sell-btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
 </div>

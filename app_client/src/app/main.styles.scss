@@ -26,13 +26,18 @@ label {
 .form-control,
 input[type="*"],
 textarea,
-select,
+select {
+  // background-color: rgba(20, 20, 20, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
 option {
-  background-color: transparent;
+  color: #000;
 }
 
 .input-group-addon {
-  background-color: transparent;
+  background-color: rgba(253, 178 , 41, 0.2);
   color: #fff;
 }
 

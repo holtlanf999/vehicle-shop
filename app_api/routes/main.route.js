@@ -11,7 +11,7 @@ module.exports = function (app) {
       user: function (callback) {
         r({uri: 'http://localhost:4001/user'}, function (error, response, body) {
           if (error) {
-            callback({service: 'user', error: error });
+            callback({service: 'user', error: error});
             return
           }
           if (!error && response.statusCode === 200) {
@@ -24,7 +24,7 @@ module.exports = function (app) {
       car: function (callback) {
         r({uri: 'http://localhost:4002/car'}, function (error, response, body) {
           if (error) {
-            callback({service: 'car', error: error });
+            callback({service: 'car', error: error});
             return
           }
           if (!error && response.statusCode === 200) {
@@ -37,7 +37,7 @@ module.exports = function (app) {
       bike: function (callback) {
         r({uri: 'http://localhost:4003/bike'}, function (error, response, body) {
           if (error) {
-            callback({service: 'bike', error: error });
+            callback({service: 'bike', error: error});
             return
           }
           if (!error && response.statusCode === 200) {
@@ -49,7 +49,7 @@ module.exports = function (app) {
       }
     },
     function (err, results) {
-      res.json({
+      res.jsonp({
         error: err,
         results: results
       });

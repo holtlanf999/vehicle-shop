@@ -3,10 +3,10 @@
 
   angular
     .module('appClient')
-    .controller('CategoriesController', CategoriesController);
+    .controller('productDetailController', productDetailController);
 
   /** @ngInject */
-  function CategoriesController() {
+  function productDetailController() {
     // var vm = this;
   }
 })();

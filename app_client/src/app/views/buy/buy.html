@@ -3,9 +3,47 @@
     <acme-navbar></acme-navbar>
   </div>
 
+  <!-- search form -->
   <div class="row">
     <div class="col-md-12">
-      <h2 class="text-center">Buy View</h2>
+      <form class="form-inline" action="search">
+        <div class="form-group">
+        <label class="buy-search-form-label">Filter By</label>
+          <select class="form-control buy-search-form">
+            <option>Category</option>
+            <option value="car">Car</option>
+            <option value="motorcycle">Motorcycle</option>
+          </select>
+
+          <select class="form-control buy-search-form">
+            <option>Condition</option>
+            <option value="new">New</option>
+            <option value="used">Used</option>
+            <option value="wrecked">Wrecked</option>
+          </select>
+
+          <select class="form-control buy-search-form">
+            <option>vehicle brand</option>
+          </select>
+
+          <select class="form-control buy-search-form">
+            <option>Body Style</option>
+          </select>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Products Displayed -->
+  <div class="row">
+  <!-- convert this "buy-product-container" to a directive and user ng-repeat to populate the view -->
+    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
+      <a ng-href="#/product-detail">
+        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
+        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
+        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
+      </a>
     </div>
   </div>
 

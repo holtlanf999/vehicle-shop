@@ -26,11 +26,11 @@
         controller: 'ActionController',
         controllerAs: 'action'
       })
-      .state('categories', {
-        url: '/categories',
-        templateUrl: 'app/views/categories/categories.html',
-        controller: 'CategoriesController',
-        controllerAs: 'categories'
+      .state('product-detail', {
+        url: '/product-detail',
+        templateUrl: 'app/views/product-detail/product.detail.html',
+        controller: 'productDetailController',
+        controllerAs: 'productDetail'
       })
       .state('buy', {
         url: '/buy',

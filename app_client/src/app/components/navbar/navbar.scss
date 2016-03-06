@@ -1,8 +1,25 @@
-.acme-navbar-text{
-  color: white;
+.navbar-default {
+  border: none;
+  background-color: transparent;
+
+  .navbar-toggle {
+    border: none;
+  }
 }
 
-.nav-text {
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FDB329;
+}
+
+.navbar-default .navbar-brand {
+  color: #FDB329;
+}
+
+.navbar-default .navbar-nav > li > a {
   color: #FDB329;
   font-size: 2rem;
 }

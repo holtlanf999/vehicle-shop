@@ -12,15 +12,15 @@
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #FDB329;
+  background-color: $main-text-color;
 }
 
 .navbar-default .navbar-brand {
-  color: #FDB329;
+  color: $main-text-color;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #FDB329;
+  color: $main-text-color;
   font-size: 2rem;
 }
 

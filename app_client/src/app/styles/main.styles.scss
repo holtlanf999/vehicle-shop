@@ -6,7 +6,7 @@
 
 html,
 body {
-  color: #fff;
+  color: $main-text-color;
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 300;
   font-size: 10px;
@@ -27,19 +27,17 @@ label {
 input[type="*"],
 textarea,
 select {
-  // background-color: rgba(20, 20, 20, 0.2);
-  // background-color: rgba(255, 179, 40, 0.6);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: $hover-color;
+  color: $main-text-color;
 }
 
 option {
-  color: #000;
+  color: $options-color;
 }
 
 .input-group-addon {
-  background-color: rgba(253, 178 , 41, 0.2);
-  color: #fff;
+  background-color: $input-group-addons;
+  color: $main-text-color;
 }
 
 input[type="radio"],

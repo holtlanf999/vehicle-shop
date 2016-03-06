@@ -1,19 +1,28 @@
 .action-buy,
 .action-sell {
-  border-top: 1px solid #FDB329;
-  border-bottom: 1px solid #FDB329;
+  border-top: 1px solid $main-text-color;
+  border-bottom: 1px solid  $main-text-color;
   background-size: cover;
-  background-color: rgba(20, 20, 20, 0.4);
+  background-color: $buy-select-action;
   display: inline-block;
   margin-top: 10rem;
   width: 50%;
 
   a {
-    color: #fff;
+    color: $main-text-color;
+    &:hover {
+      color: $link-hover;
+      text-decoration: none;
+    }
   }
 
   h3 {
     font-size: 6rem;
+
+    @media(max-width: 320px) {
+      font-size: 3.5rem;
+      width: 90%;
+    }
   }
 }
 
@@ -42,7 +51,11 @@
   width: 100%;
 
   &:hover {
-    background-color: rgba(217, 125, 37, 0.6);
+    background-color: $hover-color;
+  }
+
+  @media(max-width: 320px) {
+    padding: 2rem 0;
   }
 
 }

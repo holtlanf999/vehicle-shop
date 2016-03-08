@@ -6,6 +6,11 @@ var CarSchema = new Schema({
     type: String,
     required: true,
   },
+  brandModel: {
+    type: String,
+    required: true
+  },
+  bodyType: String,
   category: {
     type: String,
     required: true,
@@ -21,7 +26,10 @@ var CarSchema = new Schema({
     type: Number,
     required: true,
   },
-  bodyType: String,
+  driveTrain: {
+    type: String,
+    required: true
+  },
   engineDisplacement: {
     type: Number,
     required: true,
@@ -35,20 +43,15 @@ var CarSchema = new Schema({
     required: true,
   },
   images: Array,
-  layout: String,
   mileage: {
     type: Number,
     required: true,
-  },
-  brandModel: {
-    type: String,
-    required: true
   },
   modifications: {
     type: String
   },
   plate: {
-   type: Number,
+   type: String,
    unique: true 
   },
   powerOutput: Number,
@@ -57,6 +60,10 @@ var CarSchema = new Schema({
     required: true
   },
   rebuilt: Boolean,
+  seats: {
+    type: Number,
+    required: true
+  },
   sellerId: String,
   sellerName: String,
   transmition: String,

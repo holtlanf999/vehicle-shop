@@ -6,6 +6,11 @@ var BikeSchema = new Schema({
     type: String,
     required: true,
   },
+  brandModel: {
+    type: String,
+    required: true
+  },
+  bodyType: String,
   category: {
     type: String,
     required: true,
@@ -26,20 +31,15 @@ var BikeSchema = new Schema({
     type: String
   },
   images: Array,
-  bodyType: String,
   mileage: {
     type: Number,
     required: true,
-  },
-  brandModel: {
-    type: String,
-    required: true
   },
   modifications: {
     type: String
   },
   plate: {
-   type: Number,
+   type: String,
    unique: true 
   },
   powerOutput: Number,

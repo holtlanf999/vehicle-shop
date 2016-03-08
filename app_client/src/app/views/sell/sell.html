@@ -7,21 +7,22 @@
     <div class="col-md-12">
       <form action="submit-vehicle">
 
-        <!-- First Data Column -->
+        <!-- First Data group-->
         <div class="col-md-4 col-md-offset-2 col-sm-6">
           <label class="sell-label text-center" for="category">Category</label>
-          <select class="form-control" name="category" id="category">
-            <option value="Car">Car</option>
+          <select required class="form-control" name="category" id="category">
+            <option value="">---</option>
+            <option value="car">Car</option>
             <option value="motorcycle">Motorcycle</option>
           </select>
 
           <label class="sell-label text-center" for="car-brand">Car Brand</label>
-          <select class="form-control" name="car-brand" id="car-brand">
-            <option value="">Car brand</option>
+          <select required class="form-control" name="car-brand" id="car-brand">
+            <option value="">---</option>
             <option value="acura">Acura</option>
-            <option value="alfa-romeo">Alfa Romeo</option>
+            <option value="alfa_romeo">Alfa Romeo</option>
             <option value="alpina">Alpina</option>
-            <option value="aston-martin">Aston Martin</option>
+            <option value="aston_martin">Aston Martin</option>
             <option value="audi">Audi</option>
             <option value="austin">Austin</option>
             <option value="auverland">Auverland</option>
@@ -39,7 +40,7 @@
             <option value="daewoo">Daewoo</option>
             <option value="daihatsu">Daihatsu</option>
             <option value="Datsun">Datsun</option>
-            <option value="de-tomaso">De Tomaso</option>
+            <option value="de_tomaso">De Tomaso</option>
             <option value="dodge">Dodge</option>
             <option value="donkervoort">Donkervoort</option>
             <option value="eagle">Eagle</option>
@@ -71,7 +72,7 @@
             <option value="maserati">Maserati</option>
             <option value="mazda">Mazda</option>
             <option value="mclaren">McLaren</option>
-            <option value="mercedes-benz">Mercedes-Benz</option>
+            <option value="mercedes_benz">Mercedes-Benz</option>
             <option value="mercury">Mercury</option>
             <option value="mg">MG</option>
             <option value="mini">Mini</option>
@@ -87,7 +88,7 @@
             <option value="proton">Proton</option>
             <option value="reliant">Reliant</option>
             <option value="renault">Renault</option>
-            <option value="rolls-royce">Rolls-Royce</option>
+            <option value="rolls_royce">Rolls-Royce</option>
             <option value="rover">Rover</option>
             <option value="saab">Saab</option>
             <option value="seat">Seat</option>
@@ -109,7 +110,8 @@
           </select>
 
           <label class="sell-label text-center" for="moto-brand">Motorcycle Brand</label>
-          <select class="form-control" name="moto-brand" id="moto-brand">
+          <select required class="form-control" name="moto-brand" id="moto-brand">
+            <option value="">---</option>
             <option value="">Motorcycle brand</option>
             <option value="ahm">AHM</option>
             <option value="akt">AKT</option>
@@ -137,7 +139,7 @@
             <option value="geeley">Geeley</option>
             <option value="genesis">Genesis</option>
             <option value="haojue">Haojue</option>
-            <option value="harleydavidson">Harley Davidson</option>
+            <option value="harley_davidson">Harley Davidson</option>
             <option value="hero">Hero</option>
             <option value="honda">Honda</option>
             <option value="husaberg">Husaberg</option>
@@ -154,7 +156,7 @@
             <option value="lml">LML</option>
             <option value="lifan">Lifan</option>
             <option value="loncin">Loncin</option>
-            <option value="mvaugusta">MV Agusta</option>
+            <option value="mv_augusta">MV Agusta</option>
             <option value="mz">MZ</option>
             <option value="montesa">Montesa</option>
             <option value="motocruiser">Moto Cruiser</option>
@@ -176,7 +178,7 @@
             <option value="sangyang">Sang Yang</option>
             <option value="senke">Senke</option>
             <option value="serpento">Serpento</option>
-            <option value="body_styles_marca_sherco">Sherco</option>
+            <option value="sherco">Sherco</option>
             <option value="sinski">Sinski</option>
             <option value="spazzio">Spazzio</option>
             <option value="sukida">Sukida</option>
@@ -196,16 +198,17 @@
           </select>
 
           <label class="sell-label text-center" for="model">Model</label>
-          <input class="form-control" type="text" name="model" placeholder="Model">
+          <input required class="form-control" type="text" name="model" placeholder="Model">
 
           <label class="sell-label text-center" for="color">Color</label>
-          <input class="form-control" type="color" name="color">
+          <input required class="form-control" type="color" name="color">
 
           <label class="sell-label text-center" for="comment">Comment</label>
           <textarea class="form-control" name="comment" id="comment" cols="30" rows="6" placeholder="Comment"></textarea>
 
           <label class="sell-label text-center" for="condition">Condition</label>
-          <select class=" form-control" name="condition" id="condition">
+          <select required class=" form-control" name="condition" id="condition">
+            <option value="">---</option>
             <option value="new">New</option>
             <option value="used">Used</option>
             <option value="wrecked">Wrecked</option>
@@ -213,7 +216,9 @@
 
           <label class="sell-label text-center" for="doors">Doors</label>
           <div class="input-group">
-            <select class=" form-control" name="doors" id="doors">
+            <select required class=" form-control" name="doors" id="doors">
+              <option value="">---</option>
+              <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -223,29 +228,35 @@
             <div class="input-group-addon">Doors</div>
           </div>
 
-          <label class="sell-label text-center" for="drive-train">Drive Train</label>
-          <select class=" form-control" name="drive-train" id="drive-train">
-            <option value="Front Wheel Drive (FWD)">Front Wheel Drive (FWD)</option>
-            <option value="Rear Wheel Drive (RWD)">Rear Wheel Drive (RWD)</option>
-            <option value="All Wheel Drive (AWD)">All Wheel Drive (AWD)</option>
-            <option value="All Terrain (4X4)">All Terrain (4X4)</option>
-            <option value="All Terrain (6X6)">All Terrain (6X6)</option>
+          <label class="sell-label text-center" for="drive-train">Drive Train Type</label>
+          <select required class=" form-control" name="drive-train" id="drive-train">
+            <option value="">---</option>
+            <option value="fwd">Front Wheel Drive (FWD)</option>
+            <option value="rwd">Rear Wheel Drive (RWD)</option>
+            <option value="awd">All Wheel Drive (AWD)</option>
+            <option value="4x4">All Terrain (4X4)</option>
+            <option value="6x6">All Terrain (6X6)</option>
           </select>
 
           <label class="sell-label text-center" for="engine-type">Engine Type</label>
           <input class="form-control" type="text" name="engine-type" placeholder="Engine Type">
 
           <label class="sell-label text-center" for="engine-displacement">Engine Displacement (cc)</label>
-          <input class="form-control" type="number" name="engine-displacement" placeholder="Engine Displacement (cc)">
+          <input required class="form-control" type="number" name="engine-displacement" placeholder="Engine Displacement (cc)">
         </div>
 
-        <!-- Second Data Column -->
+        <!-- Second Data group-->
         <div class="col-md-4 col-sm-6">
           <label class="sell-label text-center" for="transmition">Transmition</label>
-          <input class="form-control" type="text" name="transmition" placeholder="Transmition">
+          <select required class="form-control" name="transmition">
+            <option value="">---</option>
+            <option value="manual">Manual Transmition</option>
+            <option value="automatic">Automatic transmition</option>
+          </select>
 
           <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
-          <select class=" form-control" name="fuel-type" id="fuel-type">
+          <select required class=" form-control" name="fuel-type" id="fuel-type">
+            <option value="">---</option>
             <option value="gasoline">Gasoline</option>
             <option value="diesel">Diesel</option>
             <option value="hibrid">Hybrid</option>
@@ -256,7 +267,8 @@
           <input class="form-control" type="file" name="images">
 
           <label class="sell-label text-center" for="body-style">Body Style</label>
-          <select class="form-control" name="body-style" id="Body Style">
+          <select required class="form-control" name="body-style" id="Body Style">
+            <option value="">---</option>
             <option value="suv">Suv</option>
             <option value="truck">Truck</option>
             <option value="sedan">Sedan</option>
@@ -290,17 +302,18 @@
 
           <label class="sell-label text-center" for="price">Vehicle Price</label>
           <div class="input-group">
-            <input class="form-control" type="number" name="price" placeholder="Vehicle Price">
+            <input required class="form-control" type="number" name="price" placeholder="Vehicle Price">
             <div class="input-group-addon">$</div>
           </div>
           <label class="sell-label text-center" for="rebuilt">Rebuilt</label>
-          <select class=" form-control" name="rebuilt" id="rebuilt">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
+          <select required class=" form-control" name="rebuilt" id="rebuilt">
+            <option value="">---</option>
+            <option  value="false">No</option>
+            <option  value="true">Yes</option>
           </select>
 
           <label class="sell-label text-center" for="year">Year</label>
-          <select class="form-control" name="year" id="year">
+          <select required class="form-control" name="year" id="year">
             <option value="">---</option>
             <option value="2016">2016</option>
             <option value="2015">2015</option>
@@ -390,117 +403,117 @@
           <fieldset name="extras">
             <div class="col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3">
               <div>
-                <input class="checkbox-inline" type="checkbox" name="power-steering" value="power steering">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power_steering">
                 <label class="sell-checkbox-label" for="power-steering"> Power Steering</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="tinted-glass" value="tinted glass">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="tinted_glass">
                 <label class="sell-checkbox-label" for="tinted-glass"> Tinted glass</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="power-mirrors" value="power mirrors">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power_mirrors">
                 <label class="sell-checkbox-label" for="power-mirrors"> Power Mirrors</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="ac" value="ac">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="ac">
                 <label class="sell-checkbox-label" for="ac"> A/C</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="luxury-rims" value="luxury rims">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="luxury_rims">
                 <label class="sell-checkbox-label" for="luxury-rims"> Luxury Rims</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="halogen-lights" value="halogen lights">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="halogen_lights">
                 <label class="sell-checkbox-label" for="halogen-lights"> Halogen Lights</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="cruise-control" value="cruise control">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="cruise_control">
                 <label class="sell-checkbox-label" for="cruise-control"> Cruise Control</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="electronic-stability-control" value="electronic stability control">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="electronic_stability_control">
                 <label class="sell-checkbox-label" for="electronic-stability-control"> ESC</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="reversing-camera" value="reversing camera">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing_camera">
                 <label class="sell-checkbox-label" for="reversing-camera"> Reversing Camera</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="steering-wheel-radio-controls" value="steering wheel radio controls">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="steering_wheel_radio_controls">
                 <label class="sell-checkbox-label" for="steering-wheel-radio-controls"> Steering Wheel Controls</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="memory-seats" value="memory seats">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="memory_seats">
                 <label class="sell-checkbox-label" for="memory-seats"> Memory Seats</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="travel-computer" value="travel computer">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="travel_computer">
                 <label class="sell-checkbox-label" for="travel-computer"> Travel Computer</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="rain-sensor" value="rain sensor">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="rain_sensor">
                 <label class="sell-checkbox-label" for="rain-sensor"> Rain Sensor</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="airbags" value="airbags">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="airbags">
                 <label class="sell-checkbox-label" for="airbags"> Airbags</label>
               </div>
             </div>
             <div class="col-sm-4 col-md-4">
               <div>
-                <input class="checkbox-inline" type="checkbox" name="alarm" value="alarm">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="alarm">
                 <label class="sell-checkbox-label" for="alarm"> Alarm</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="defroster" value="defroster">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="defroster">
                 <label class="sell-checkbox-label" for="defroster"> Defroster</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="turbo" value="turbo">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="turbo">
                 <label class="sell-checkbox-label" for="turbo"> Turbo</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="reversing-sensors" value="reversing sensors">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing_sensors">
                 <label class="sell-checkbox-label" for="reversing-sensors"> Reversing Sensors</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="start-button" value="start button">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="start_button">
                 <label class="sell-checkbox-label" for="start-button"> Start Button</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="smart-key" value="smart key">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="smart_key">
                 <label class="sell-checkbox-label" for="smart-key"> Smart Key</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="adjustable-steering" value="adjustable steering">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="adjustable_steering">
                 <label class="sell-checkbox-label" for="adjustable-steering"> Adjustable Steering</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="power-seats" value="power seats">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power_seats">
                 <label class="sell-checkbox-label" for="power-seats"> Power Seats</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="power-windows" value="power windows">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power_windows">
                 <label class="sell-checkbox-label" for="power-windows"> Power Windows</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="abs-breaks" value="abs breaks">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="abs_breaks">
                 <label class="sell-checkbox-label" for="abs-breaks"> ABS Breaks</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="sunroof" value="sunroof">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="sunroof">
                 <label class="sell-checkbox-label" for="sunroof"> Sunroof</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="panoramic-roof" value="panoramic roof">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="panoramic_roof">
                 <label class="sell-checkbox-label" for="panoramic-roof"> Panoramic Roof</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="usb-aux-radio" value="usb-aux-radio">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="usb-aux-radio">
                 <label class="sell-checkbox-label" for="usb-aux-radio"> Radio (USB-AUX)</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="lcd-screen" value="lcd-screen">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="lcd-screen">
                 <label class="sell-checkbox-label" for="lcd-screen"> LCD Screen</label>
               </div>
             </div>

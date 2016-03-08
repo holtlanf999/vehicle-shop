@@ -1,13 +1,29 @@
+/*User query*/
+{
+  "name": "Lanford Gabriel Murillo",
+  "email": "holtlanf999@mymail.com",
+  "phone": 83168552,
+   "password": "a851308387ed93a0548c48b6150429aa"
+},
+{
+  "name": "Ian Gabriel Murillo",
+  "email": "ian_512@mymail.com",
+  "phone": 22271844,
+   "password": "a851308387ed93a0548c48b6150429aa"
+}
+
 /*Car query*/
 {
-  "brand": "Toyota",
-  "category": "Cars",
+  "car-brand": "Toyota",
+  "brandModel": "supra mk3",
+  "bodyType": "Sports car",
+  "category": "Car",
   "color": "white",
   "comments": "car is in very good shape, new paint and wheels, recently overhauled",
   "condition": "used",
   "dateCreated": 1456200380,
-  "doors": 4,
-  "driveTrain": "Manual",
+  "doors": 2,
+  "driveTrain": "RWD",
   "engineDisplacement": 3000,
   "engineType": "Inline 6",
   "extras": "stock",
@@ -17,26 +33,27 @@
     "http://www.stanceiseverything.com/wp-content/uploads/2010/12/supra_mk4_1.jpg",
     "http://i55.tinypic.com/jqkk29.jpg"
   ],
-  "layout": "coupe",
   "mileage": 245000,
-  "brandModel": "supra mk3",
   "modifications": "not modified",
   "plate": 235485,
   "powerOutput": 270,
   "price": 6200,
   "rebuilt": true,
+  "seats": 4,
   "sellerId": 984261746006200165,
   "sellerName": "Ian Gabriel Murillo",
   "transmition": "manual",
   "year": 1987
 },
 {
-  "brand": "BMW",
-  "category": "Cars",
+  "car-brand": "BMW",
+  "brandModel": "M3 E46",
+  "bodyType": "Sports car",
+  "category": "Car",
   "color": "Blue",
   "comments": "Car is intact, 0/60 in 3.2 sec, looking for a newer model of the same branch",
   "condition": "used",
-  "dateCreated": 1456242185,
+  "dateCreated": 1456200253,
   "doors": 2,
   "driveTrain": "RWD",
   "engineDisplacement": 3200,
@@ -49,41 +66,27 @@
     "https://www.google.com/search?espv=2&tbm=isch&q=bmw+m3+turbo+freaks&spell=1&sa=X&ved=0ahUKEwiqmNjYnY7LAhUGXh4KHUqBBi4QBQgaKAA&dpr=2&biw=1600&bih=785#imgrc=juJ8Y27Zaiz3dM%3A",
     "http://image.superstreetonline.com/f/24875929+w+h+q80+re0+cr1/eurp_0910_01_o%2B2004_bmw_m3%2Bfront_passenger_side.jpg"
   ],
-  "layout": "coupe",
-  "mileage": 82000,
-  "brandModel": "M3 e46",
+  "mileage": 50000,
   "modifications": "Heavily modified",
-  "plate": 948569,
+  "plate": 00070,
   "powerOutput": 750,
-  "price": 45000,
-  "rebuilt": false,
-  "sellerId": "56cc7c84c1204d040ffc3c0e",
+  "price": 32000,
+  "rebuilt": true,
+  "seats": 5,
+  "sellerId": 984261746006200165,
   "sellerName": "Lanford Gabriel Murillo",
-  "transmition": "manual",
-  "year": 2004
-}
-
-/*User query*/
-{
-  "name": "Lanford Gabriel Murillo",
-  "email": "holtlanf999@mymail.com",
-  "phone": 83168552,
-   "age": 23,
-   "password": "a851308387ed93a0548c48b6150429aa"
-},
-{
-  "name": "Ian Gabriel Murillo",
-  "email": "ian_512@mymail.com",
-  "phone": 22271844,
-   "age": 12,
-   "password": "a851308387ed93a0548c48b6150429aa"
+  "transmition": "6 speed manual",
+  "year": 2005
 }
 
 /*Bike query*/
 {
-  "brand": "Yamaha",
+  "moto-brand": "Yamaha",
+  "brandModel": "XT 1200 Z Super Tenere",
+  "bodyType": "enduro",
   "category": "Bike",
-  "Color": "black, grey and blue",
+  "color": "black, grey and blue",
+  "comments": "Nice ride",
   "condition": "new",
   "dateCreated": "1456243364",
   "engineDisplacement": 1200,
@@ -94,9 +97,7 @@
     "http://cdn.yamaha-motor.eu/product_assets/2015/XTZ1200/950-75/2015-Yamaha-XT1200Z-Super-Tenere-EU-Race-Blu-Studio-007.jpg", 
     "http://cdn.yamaha-motor.eu/product_assets/2015/XTZ1200/950-75/2015-Yamaha-XT1200Z-Super-Tenere-EU-Race-Blu-Studio-001.jpg"
   ],
-  "layout": "enduro",
   "mileage": 0,
-  "brandModel": "XT 1200 Z Super Tenere",
   "modidications": "no",
   "plate": "",
   "powerOutput": 180,
@@ -108,9 +109,11 @@
   "year": 2016
 },
 {
-  "brand": "BMW",
+  "moto-brand": "BMW",
+  "brandModel": "S1000RR",
+  "bodyType": "Superbike",
   "category": "Bike",
-  "Color": "White and blue",
+  "color": "White and blue",
   "condition": "new",
   "dateCreated": "1456243576",
   "engineDisplacement": 1000,
@@ -121,9 +124,7 @@
     "http://i0.wp.com/www.asphaltandrubber.com/wp-content/uploads/2014/09/2015-bmw-s1000rr.jpg", 
     "http://motorcycle.com.vsassets.com/blog/wp-content/uploads/2014/09/093014-2015-bmw-s1000rr-P90162325_highRes.jpg"
   ],
-  "layout": "Superbike",
   "mileage": 0,
-  "brandModel": "S1000RR",
   "modidications": "no",
   "plate": "345672",
   "powerOutput": 190,
@@ -133,4 +134,50 @@
   "sellerName": "Lanford Gabriel Murillo",
   "transmition": "6-speed",
   "year": 2016
+}
+
+
+/*car new schema*/
+{
+  "category": "car",
+  "car-brand": "bmw",
+  "model": "M3 E46",
+  "color": "#ff0000",
+  "comment": "perfect condition",
+  "condition": "used",
+  "doors": 2,
+  "drive-train": "Rear Wheel Drive (RWD)",
+  "engine-type": "Inline 6",
+  "engine-displacement": 3200,
+  "transmition": "Six speed Manual",
+  "fuel-type": "gasoline",
+  "images": {
+
+  },
+  "body-style": "sports car",
+  "mileage":50000,
+  "modifications": "factory stock",
+  "plate": 00503,
+  "power": 347,
+  "price": 30000,
+  "rebuilt":false,
+  "year":2005,
+
+  "power-steering": "power steering",
+  "tinted-glass": "tinted glass",
+  "power-mirrors": "power mirrors",
+  "ac": "ac",
+  "luxury-rims": "luxury rims",
+  "electronic-stability-control": "electronic stability control",
+  "reversing-camera": "reversing camera",
+  "steering-wheel-radio-controls": "steering wheel radio controls",
+  "airbags": "airbags",
+  "defroster": "defroster",
+  "turbo": "turbo",
+  "reversing-sensors": "reversing sensors",
+  "start-button":"start button",
+  "power-windows": "power windows",
+  "sunroof": "sunroof",
+  "panoramic-roof":"panoramic roof",
+  "usb-aux-radio": "usb-aux-radio",
 }

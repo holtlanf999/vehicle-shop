@@ -15,10 +15,6 @@ var UserSchema = new Schema({
     type: Number,
     require: true,
   },
-  age: {
-    type: Number,
-    require: true
-  },
   password: {
     type: String,
     required: true

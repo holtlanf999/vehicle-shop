@@ -3,13 +3,19 @@
   "name": "Lanford Gabriel Murillo",
   "email": "holtlanf999@mymail.com",
   "phone": 83168552,
-   "password": "a851308387ed93a0548c48b6150429aa"
+  "password": "a851308387ed93a0548c48b6150429aa"
 },
 {
   "name": "Ian Gabriel Murillo",
   "email": "ian_512@mymail.com",
   "phone": 22271844,
-   "password": "a851308387ed93a0548c48b6150429aa"
+  "password": "a851308387ed93a0548c48b6150429aa"
+},
+{
+  "name": "Ana Lucia Murillo Melendez",
+  "email": "anamurillo@mymail.com",
+  "phone": 22271844,
+  "password": "678564785876vf4gtg255t5678jh5364"
 }
 
 /*Car query*/
@@ -98,8 +104,8 @@
     "http://cdn.yamaha-motor.eu/product_assets/2015/XTZ1200/950-75/2015-Yamaha-XT1200Z-Super-Tenere-EU-Race-Blu-Studio-001.jpg"
   ],
   "mileage": 0,
-  "modidications": "no",
-  "plate": "",
+  "modifications": "no",
+  "plate": "4g424",
   "powerOutput": 180,
   "price": 15000,
   "rebuilt": false,

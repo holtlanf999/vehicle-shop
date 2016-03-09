@@ -10,3 +10,8 @@
     // var vm = this;
   }
 })();
+
+
+function SubmitVehicle() {
+	console.log(this);
+}

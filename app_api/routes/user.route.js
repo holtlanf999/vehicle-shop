@@ -1,7 +1,7 @@
 var _ = require('lodash'),
+    mongoose = require('mongoose'),
     User = require('../app_models/user.model.js'),
-    config = require('../config');
-    console.log(config.userRoute + '/:id');
+    config = require('../config.js');
 
 module.exports = function (app) {
   /*Create*/
@@ -13,6 +13,39 @@ module.exports = function (app) {
       }
         res.json({info: 'user created successfully'});
     });
+  });
+
+  app.post(config.userRoute + config.logRoute, function (req, res) {
+    User.findOne({
+      userName: req.body.userName
+    }), function (err, user) {
+
+      if (err) throw err;
+
+      if (!user) {
+        res.send({
+          success: false, 
+          message: 'Authentication failed. User not found'
+        }); 
+      } else if (user) {
+        if(user.password != req.body.password) {
+          res.send({
+            success: false,
+            message: 'Authentication failed, Wrong Password'
+          });
+        } else {
+          var token = jwt.sign(user, app.get(''), {
+            expiresInMinutes: 1440 //24 hours
+          });
+
+          res.end({
+            success: true,
+            message: 'token Created successfully',
+            token: token
+          })
+        }
+      }
+    };
   });
 
   /*Read*/
@@ -33,7 +66,7 @@ module.exports = function (app) {
       if (user) {
         res.json({info: 'user found successfully', data: user});
       } else {
-        res.json({info: 'user not found'});
+        res.end('user not found');
       }
     });
   });

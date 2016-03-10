@@ -4,6 +4,12 @@ var mongoose = require('mongoose'),
 var UserSchema = new Schema({
   name: {
     type: String,
+    required: true,
+    unique: true
+  },
+  userName: {
+    type: String,
+    required: true,
     unique: true
   },
   email: {

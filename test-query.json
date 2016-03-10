@@ -1,21 +1,24 @@
 /*User query*/
 {
   "name": "Lanford Gabriel Murillo",
+  "userName": "holtlanf999",
   "email": "holtlanf999@mymail.com",
   "phone": 83168552,
-  "password": "a851308387ed93a0548c48b6150429aa"
+  "password": "root"
 },
 {
   "name": "Ian Gabriel Murillo",
+  "userName": "Ian_512",
   "email": "ian_512@mymail.com",
   "phone": 22271844,
-  "password": "a851308387ed93a0548c48b6150429aa"
+  "password": "root"
 },
 {
   "name": "Ana Lucia Murillo Melendez",
+  "userName": "amurilloMe",
   "email": "anamurillo@mymail.com",
   "phone": 22271844,
-  "password": "678564785876vf4gtg255t5678jh5364"
+  "password": "root"
 }
 
 /*Car query*/

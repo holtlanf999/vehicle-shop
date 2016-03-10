@@ -1,6 +1,6 @@
 var _ = require('lodash'),
     Bike = require('../app_models/bike.model.js'),
-    config = require('../config');
+    config = require('../config.js');
 
 module.exports = function (app) {
   /*Create*/

@@ -1,13 +1,14 @@
 var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
+		mongoose = require('mongoose'),
 		morgan = require('morgan'),
 		jwt = require('jsonwebtoken'),
-		config = require('./config');
+		config = require('./config.js');
 
-var mongoose = require('mongoose'),
 		port = process.env.PORT || 4001;
-mongoose.connect(config.database + userRoute);
+
+mongoose.connect(config.database + config.userRoute);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

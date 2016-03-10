@@ -3,7 +3,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
 		morgan = require('morgan'),
 		jwt = require('jsonwebtoken'),
-		config = require('./config');
+		config = require('./config.js');
     
 var mongoose = require('mongoose'),
 		port = process.env.PORT || 4003;

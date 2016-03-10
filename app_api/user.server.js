@@ -1,17 +1,19 @@
 var express = require('express'),
     app = express(),
-    bodyParser = require('body-parser');
-    
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/vshopDB/pusers');
+    bodyParser = require('body-parser'),
+		morgan = require('morgan'),
+		jwt = require('jsonwebtoken'),
+		config = require('./config');
+
+var mongoose = require('mongoose'),
+	port = process.env.PORT || 4001;
+mongoose.connect(config.database, '/users');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 var userRoute = require('./routes/user.route.js')(app);
 
-app.listen(4001, function () {
-   console.log('USER listening on port 4001');
+app.listen(port, function () {
+   console.log('USER listening on port', port);
 });

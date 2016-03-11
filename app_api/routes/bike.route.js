@@ -1,9 +1,10 @@
 var _ = require('lodash'),
-    Bike = require('../app_models/bike.model.js');
+    Bike = require('../app_models/bike.model.js'),
+    config = require('../config');
 
 module.exports = function (app) {
   /*Create*/
-  app.post('/bike', function (req, res) {
+  app.post(config.bikeRoute, function (req, res) {
     var newBike = new Bike(req.body);
     newBike.save(function (err) {
       if (err) {
@@ -14,7 +15,7 @@ module.exports = function (app) {
   });
 
   /*Read*/
-  app.get('/bike', function (req, res) {
+  app.get(config.bikeRoute, function (req, res) {
     Bike.find(function (err, bikes) {
       if (err) {
         res.json({info: 'error during find bikes', error: err});
@@ -23,7 +24,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/bike/:id', function (req, res) {
+  app.get(config.bikeRoute + '/:id', function (req, res) {
     Bike.findById(req.params.id, function (err, bike) {
       if (err) {
         res.json({info: 'error during find bike', error: err});
@@ -37,7 +38,7 @@ module.exports = function (app) {
   });
 
   /*Update*/
-  app.put('/bike/:id', function (req, res) {
+  app.put(config.bikeRoute + '/:id', function (req, res) {
     Bike.findById(req.params.id, function (err, bike) {
       if (err) {
         res.json({info: 'error during find bike', error: err});
@@ -57,7 +58,7 @@ module.exports = function (app) {
   });
 
   // /*Delete*/
-  app.delete('/bike/:id', function (req, res) {
+  app.delete(config.bikeRoute + '/:id', function (req, res) {
     Bike.findByIdAndRemove(req.params.id, function (err) {
       if (err) {
         res.json({info: 'error while remove bike', error: err});

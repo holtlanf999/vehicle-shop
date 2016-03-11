@@ -1,9 +1,10 @@
 var _ = require('lodash'),
-    Car = require('../app_models/car.model.js');
+    Car = require('../app_models/car.model.js'),
+    config = require('../config');
 
 module.exports = function (app) {
   /*Create*/
-  app.post('/car', function (req, res) {
+  app.post(config.carRoute, function (req, res) {
     var newCar = new Car(req.body);
     newCar.save(function (err) {
       if (err) {
@@ -14,7 +15,7 @@ module.exports = function (app) {
   });
 
   /*Read*/
-  app.get('/car', function (req, res) {
+  app.get(config.carRoute, function (req, res) {
     Car.find(function (err, cars) {
       if (err) {
         res.json({info: 'error during find cars', error: err});
@@ -23,7 +24,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/car/:id', function (req, res) {
+  app.get(config.carRoute + ':id', function (req, res) {
     Car.findById(req.params.id, function (err, car) {
       if (err) {
         res.json({info: 'error during find car', error: err});
@@ -37,7 +38,7 @@ module.exports = function (app) {
   });
 
   /*Update*/
-  app.put('/car/:id', function (req, res) {
+  app.put(config.carRoute + '/:id', function (req, res) {
     Car.findById(req.params.id, function (err, car) {
       if (err) {
         res.json({info: 'error during find car', error: err});
@@ -57,7 +58,7 @@ module.exports = function (app) {
   });
 
   // /*Delete*/
-  app.delete('/car/:id', function (req, res) {
+  app.delete(config.carRoute + '/:id', function (req, res) {
     Car.findByIdAndRemove(req.params.id, function (err) {
       if (err) {
         res.json({info: 'error while remove car', error: err});

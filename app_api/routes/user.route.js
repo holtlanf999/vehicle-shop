@@ -1,9 +1,11 @@
 var _ = require('lodash'),
-    User = require('../app_models/user.model.js');
+    User = require('../app_models/user.model.js'),
+    config = require('../config');
+    console.log(config.userRoute + '/:id');
 
 module.exports = function (app) {
   /*Create*/
-  app.post('/user', function (req, res) {
+  app.post(config.userRoute, function (req, res) {
     var newUser = new User(req.body);
     newUser.save(function (err) {
       if (err) {
@@ -14,7 +16,7 @@ module.exports = function (app) {
   });
 
   /*Read*/
-  app.get('/user', function (req, res) {
+  app.get(config.userRoute, function (req, res) {
     User.find(function (err, users) {
       if (err) {
         res.json({info: 'error during find users', error: err});
@@ -23,7 +25,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/user/:id', function (req, res) {
+  app.get(config.userRoute + '/:id', function (req, res) {
     User.findById(req.params.id, function (err, user) {
       if (err) {
         res.json({info: 'error during find user', error: err});
@@ -37,7 +39,7 @@ module.exports = function (app) {
   });
 
   /*Update*/
-  app.put('/user/:id', function (req, res) {
+  app.put(config.userRoute + '/:id', function (req, res) {
     User.findById(req.params.id, function (err, user) {
       if (err) {
         res.json({info: 'error during find user', error: err});
@@ -57,7 +59,7 @@ module.exports = function (app) {
   });
 
   // /*Delete*/
-  app.delete('/user/:id', function (req, res) {
+  app.delete(config.userRoute + '/:id', function (req, res) {
     User.findByIdAndRemove(req.params.id, function (err) {
       if (err) {
         res.json({info: 'error while remove user', error: err});

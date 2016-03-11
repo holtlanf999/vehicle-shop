@@ -6,11 +6,13 @@ var express = require('express'),
 		config = require('./config');
 
 var mongoose = require('mongoose'),
-	port = process.env.PORT || 4001;
-mongoose.connect(config.database, '/users');
+		port = process.env.PORT || 4001;
+mongoose.connect(config.database + userRoute);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(morgan('dev'));
 
 var userRoute = require('./routes/user.route.js')(app);
 

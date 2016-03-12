@@ -7,6 +7,9 @@
 
   /** @ngInject */
   function RegisterController() {
-    // var vm = this;
+    var vm = this;
+    vm.submit = function () {
+    	console.log('submiting');
+    }
   }
 })();

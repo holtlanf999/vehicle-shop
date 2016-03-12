@@ -5,11 +5,11 @@
     .module('appClient')
     .controller('RegisterController', RegisterController);
 
-  /** @ngInject */
+  // /** @ngInject */
   function RegisterController() {
     var vm = this;
-    vm.submit = function () {
-    	console.log('submiting');
+    vm.submit = function ($window) {
+      console.log(vm);
     }
   }
 })();

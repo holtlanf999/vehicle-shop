@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="LoginController as login">
   <div class="row">
     <acme-navbar></acme-navbar>
   </div>
@@ -6,12 +6,13 @@
   <div class="row">
 
     <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-      <form class="login-form" action="log-user">
+      <!-- Login Form -->
+      <form class="login-form" name="login-form" ng-submit="login.enter()">
         <label class="login-label text-center" for="user-name">User Name</label>
-        <input class="form-control" type="text" name="user-name" placeholder="User Name" required="required">
+        <input class="form-control" type="text" ng-model="user_name" name="user-name" placeholder="User Name" required="required">
         <label class="login-label text-center" for="password">Password</label>
-        <input class="form-control" type="password" name="password" placeholder="Password" required="required">
-        <button class="btn btn-success login-btn" type="button">Log in</button>
+        <input class="form-control" type="password" ng-model="user_password" name="password" placeholder="Password" required="required">
+        <button class="btn btn-success login-btn" type="submit">Log in</button>
       </form>
     </div>
   </div>

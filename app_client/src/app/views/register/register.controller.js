@@ -8,7 +8,7 @@
   // /** @ngInject */
   function RegisterController() {
     var vm = this;
-    vm.submit = function ($window) {
+    vm.submit = function () {
       console.log(vm);
     }
   }

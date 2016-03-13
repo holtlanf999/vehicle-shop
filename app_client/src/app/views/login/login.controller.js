@@ -3,11 +3,13 @@
 
   angular
     .module('appClient')
-    .controller('LoginController', LoginController);
+    .controller('LoginController', ['userService', LoginController]);
 
   /** @ngInject */
-  function LoginController() {
+  function LoginController(userService) {
     var vm = this;
+
+    console.log(userService);
 
     vm.enter = function() {
       console.log(vm);

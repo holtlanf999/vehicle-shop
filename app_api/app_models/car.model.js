@@ -10,7 +10,10 @@ var CarSchema = new Schema({
     type: String,
     required: true
   },
-  bodyType: String,
+  bodyType: {
+   type: String,
+   required: true 
+  },
   category: {
     type: String,
     required: true,
@@ -35,9 +38,6 @@ var CarSchema = new Schema({
     required: true,
   },
   engineType: String,
-  extras: {
-    type: String
-  },
   fuelType: {
     type: String,
     required: true,
@@ -70,7 +70,35 @@ var CarSchema = new Schema({
   year: {
     type: Number,
     required: true
-  }
+  },
+  powerSteering: String,
+  tintedGlass: String,
+  powerMirrors: String,
+  ac: String,
+  luxuryRims: String,
+  halogenLights: String,
+  cruiseControl: String,
+  esc: String,
+  reversingCamera: String,
+  steeringWheelControls: String,
+  memorySeats: String,
+  travelComputer: String,
+  rainSensor: String,
+  airbags: String,
+  alarm: String,
+  defroster: String,
+  turbo: String,
+  reversingSensors: String,
+  startButton: String,
+  smartKey: String,
+  adjustableSteering: String,
+  powerSeats: String,
+  powerWindows: String,
+  absBreaks: String,
+  sunroof: String,
+  panoramicRoof: String,
+  usbAuxRadio: String,
+  ldcScreen: String
 });
 
 var carModel = mongoose.model('Car', CarSchema);

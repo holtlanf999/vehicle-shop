@@ -3,10 +3,10 @@
 
   angular
     .module('appClient')
-    .controller('BuyController', ['mainService', BuyController]);
+    .controller('BuyController', ['carService','bikeService', BuyController]);
 
   /** @ngInject */
-  function BuyController(mainService) {
+  function BuyController(carService, bikeService) {
     // var vm = this;
   }
 })();

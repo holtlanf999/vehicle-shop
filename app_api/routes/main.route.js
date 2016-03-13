@@ -67,17 +67,28 @@ module.exports = function (app) {
   app.get(config.mainRoute + config.userRoute, function (req, res) {
     request({ uri: config.userServer + config.userRoute}, function (error, response, body) {
       if (error) {
-        res.json({service: 'user', error: error});
-        return
+        res.end('An error has occured', error.statusCode);
       }
-      if (!error && response.statusCode === 200) {
-        res.json(null, body);
-      } else {
-        res.json(response.statusCode);
-      }
+      res.send(response.body.data);
     });
   });
-  function (err, results) {
-    res.jsonp({error: err, results: results});
+
+  app.get(config.mainRoute + config.carRoute, function (req, res) {
+    request({ uri: config.carServer + config.carRoute}, function (error, response, body) {
+      if (error) {
+        res.end('An error has occured', error.statusCode);
+      }
+      res.send(response.body.data);
+    });
   });
+
+  app.get(config.mainRoute + config.bikeRoute, function (req, res) {
+    request({ uri: config.bikeServer + config.bikeRoute}, function (error, response, body) {
+      if (error) {
+        res.end('An error has occured', error.statusCode);
+      }
+      res.send(response.body.data);
+    });
+  });
+
 }

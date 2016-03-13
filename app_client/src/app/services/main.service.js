@@ -6,12 +6,14 @@
 
   function serviceData ($http) {
     $http.get('//localhost:4000/main')
-    .then( function getServerData (res) {
-      console.log('cars: ', res.data.results.car);
-      console.log('motorcycles: ', res.data.results.bike);
-      console.log('users: ', res.data.results.user);
-    }, function getError (res) {
+    .then(getData),
+    function getError (res) {
       console.log('Error', res);
-    });
+    };
+
+    function getData (res) {
+      console.log('car result: ',res.data.results.car);
+      console.log('bike result: ',res.data.results.bike);
+    }
   }
 })();

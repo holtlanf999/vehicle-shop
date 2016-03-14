@@ -22,6 +22,8 @@
 }
 
 /*Bike query*/
+
+/*Yamaha Super Tenere*/
 {
   "brand": "Yamaha",
   "brandModel": "XT 1200 Z Super Tenere",
@@ -48,7 +50,9 @@
   "sellerName": "Lanford Gabriel Murillo",
   "transmition": "6-speed; multi-plate wet clutch",
   "year": 2016
-},
+}
+
+/*BMW S1000RR */
 {
   "brand": "BMW",
   "brandModel": "S1000RR",

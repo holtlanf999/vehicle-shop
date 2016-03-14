@@ -23,14 +23,13 @@
 
 /*Bike query*/
 {
-  "moto-brand": "Yamaha",
+  "brand": "Yamaha",
   "brandModel": "XT 1200 Z Super Tenere",
   "bodyType": "enduro",
   "category": "Bike",
-  "color": "black, grey and blue",
+  "color": "#000",
   "comments": "Nice ride",
   "condition": "new",
-  "dateCreated": "1456243364",
   "engineDisplacement": 1200,
   "engineType": "1199cc liquid-cooled inline 2-cylinder; DOHC; 8 valves",
   "extras": "factory stock",
@@ -51,11 +50,11 @@
   "year": 2016
 },
 {
-  "moto-brand": "BMW",
+  "brand": "BMW",
   "brandModel": "S1000RR",
   "bodyType": "Superbike",
   "category": "Bike",
-  "color": "White and blue",
+  "color": "#fff",
   "condition": "new",
   "dateCreated": "1456243576",
   "engineDisplacement": 1000,

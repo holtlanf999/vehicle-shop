@@ -1,7 +1,12 @@
 var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
+	passport = require('passport'),
+ 	passportLocal = require('./config/passport.js'),
 	morgan = require('morgan');
+
+
+app.use(passport.initialize());
 		
 /*Activate CORS for this server*/		
 app.use(function(req, res, next) {

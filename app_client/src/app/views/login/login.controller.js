@@ -12,7 +12,10 @@
     // console.log(userService);
 
     vm.enter = function() {
-      console.log(userService.getUserData());
+      console.log('user name: ', vm.user_name);
+      console.log('service user name: ', userService.user.name + '\n');
+      console.log('Pass: ', vm.user_password);
+      console.log('service pass: ', userService.user.pass);
     }
   }
 })();

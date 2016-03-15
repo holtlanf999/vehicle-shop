@@ -3,13 +3,13 @@
 
   angular
     .module('appClient')
-    .controller('RegisterController', RegisterController);
+    .controller('RegisterController', ['userService', RegisterController]);
 
   // /** @ngInject */
-  function RegisterController() {
+  function RegisterController(userService) {
     var vm = this;
     vm.submit = function () {
-      console.log(vm);
+      console.log('users: ', vm);
     }
   }
 })();

@@ -3,16 +3,16 @@
 
   angular
     .module('appClient')
-    .controller('LoginController', ['userService', LoginController]);
+    .controller('LoginController', ['userService',  LoginController]);
 
   /** @ngInject */
-  function LoginController(userService) {
+  function LoginController(userService, lodash) {
     var vm = this;
 
-    console.log(userService);
+    // console.log(userService);
 
     vm.enter = function() {
-      console.log(vm);
+      console.log(userService.getUserData());
     }
   }
 })();

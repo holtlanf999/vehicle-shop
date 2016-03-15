@@ -7,11 +7,12 @@
 
   /** @ngInject */
   function SellController() {
-    // var vm = this;
+    var vm = this;
+    vm.submitVehicle = submitVehicle;
   }
 })();
 
 
-function SubmitVehicle() {
+function submitVehicle() {
 	console.log(this);
 }

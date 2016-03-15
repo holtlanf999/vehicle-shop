@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('appClient', ['ngAnimate', 'ngSanitize', 'ngAria', 'ui.router', 'ui.bootstrap', 'toastr']);
+    .module('appClient', ['ngAnimate', 'ngSanitize', 'ngAria', 'ui.router', 'ui.bootstrap', 'jkuri.gallery']);
 })();

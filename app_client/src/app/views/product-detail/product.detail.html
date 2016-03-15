@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="productDetailController as product">
   <div class="row">
     <acme-navbar></acme-navbar>
   </div>
@@ -7,7 +7,11 @@
     <div class="col-md-12">
       <h2>Toyota Supra MK3 1989</h2>
     </div>
-
+    
+    <div class="col-md-10">
+      <ng-gallery images="product.images" thumbs-num="20"></ng-gallery> 
+    </div>
+    
     <div class="col-md-12">
       <div class="col-md-1">
         <span>Color: </span>
@@ -17,6 +21,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="row">
     <main-footer></main-footer>

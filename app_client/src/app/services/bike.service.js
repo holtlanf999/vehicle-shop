@@ -6,15 +6,13 @@
 
   function bikeData ($http) {
     $http.get('//localhost:4000/main/bike')
-    .then(getData),
+    .then(function (res) {
+      var bikes = res.data;
+    });
+
     /*error handler*/
     function getError (res) {
       console.log('Error', res);
     };
-
-    /*callback*/
-    function getData (res) {
-      console.log('bike result: ',res.data);
-    }
   }
 })();

@@ -7,6 +7,7 @@
 
   /** @ngInject */
   function BuyController(carService, bikeService) {
-    // var vm = this;
+    var vm = this;
+    console.log('service in controller: ', bikeService);
   }
 })();

@@ -10,6 +10,8 @@
         'ui.router',
         'ui.bootstrap',
         'jkuri.gallery',
-        'ngLodash'
+        'ngLodash',
+        'cloudinary',
+        'ngFileUpload'
       ]);
 })();

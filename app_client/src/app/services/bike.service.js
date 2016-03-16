@@ -8,11 +8,12 @@
     $http.get('//localhost:4000/main/bike')
     .then(function (res) {
       var bikes = res.data;
+      return bikes;
     });
 
     /*error handler*/
     function getError (res) {
-      console.log('Error', res);
+      return console.log('Error', res);
     };
   }
 })();

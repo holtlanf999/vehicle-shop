@@ -7,12 +7,12 @@
   function carData ($http) {
     $http.get('//localhost:4000/main/car')
     .then(function (res) {
-      // console.log('car result: ',res.data);
+      return res;
     }),
 
     /*error handler*/
     function getError (res) {
-      console.log('Error', res);
+      return console.log('Error', res);
     };
   }
 })();

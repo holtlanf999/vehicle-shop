@@ -13,5 +13,6 @@
         'ngLodash',
         'cloudinary',
         'ngFileUpload'
-      ]);
+      ]
+    );
 })();

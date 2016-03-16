@@ -7,8 +7,13 @@
 
   /** @ngInject */
   function SellController(Upload, cloudinary) {
-
     var vm = this;
+
+    // form options content objects...
+    vm.category = [
+      {value: 'car'},
+      {value: 'motorcycle'}
+    ];
 
     vm.carBrand = [
       {value: 'abarth'},
@@ -178,7 +183,143 @@
       {value: 'zundapp'},
     ];
 
+    vm.condition = [
+      {value: "new"},
+      {value: "used"},
+      {value: "wrecked"}
+    ];
 
+    vm.doors = [
+      {value: 1},
+      {value: 2},
+      {value: 3},
+      {value: 4},
+      {value: 5},
+      {value: 6},
+    ];
+
+    vm.driveTrain = [
+      {value: 'fwd', name: 'Front Wheel Drive (FWD)'},
+      {value: 'rwd', name: 'Rear Wheel Drive (RWD)'},
+      {value: 'awd', name: 'All Wheel Drive (AWD)'},
+      {value: '4x4', name: 'All Terrain (4X4)'},
+      {value: '6x6', name: 'All Terrain (6X6)'},
+    ];
+
+    vm.transmition = [
+      {value: 'auto', name: 'automatic transmition'},
+      {value: 'manual', name: 'manual transmition'}
+    ];
+
+    vm.fuelType = [
+      {value: 'gasoline'},
+      {value: 'diesel'},
+      {value: 'electric'},
+      {value: 'hybrid'}
+    ];
+
+    vm.bodyStyle = [
+      {value: 'suv', name},
+      {value: 'truck', name},
+      {value: 'sedan', name},
+      {value: 'van', name},
+      {value: 'coupe', name},
+      {value: 'wagon', name},
+      {value: 'convertible', name},
+      {value: 'sports-car', name},
+      {value: 'crossover', name},
+      {value: 'luxury', name},
+      {value: 'hatchback', name},
+    ];
+
+    vm.rebuild = [
+      {value: 'false', name: 'yes'},
+      {value: 'true', name: 'no'}
+    ];
+
+    vm.year = [
+      {value: '2016'},
+      {value: '2015'},
+      {value: '2014'},
+      {value: '2013'},
+      {value: '2012'},
+      {value: '2011'},
+      {value: '2010'},
+      {value: '2009'},
+      {value: '2008'},
+      {value: '2007'},
+      {value: '2006'},
+      {value: '2005'},
+      {value: '2004'},
+      {value: '2003'},
+      {value: '2002'},
+      {value: '2001'},
+      {value: '2000'},
+      {value: '1999'},
+      {value: '1998'},
+      {value: '1997'},
+      {value: '1996'},
+      {value: '1995'},
+      {value: '1994'},
+      {value: '1993'},
+      {value: '1992'},
+      {value: '1991'},
+      {value: '1990'},
+      {value: '1989'},
+      {value: '1988'},
+      {value: '1987'},
+      {value: '1986'},
+      {value: '1985'},
+      {value: '1984'},
+      {value: '1983'},
+      {value: '1982'},
+      {value: '1981'},
+      {value: '1980'},
+      {value: '1979'},
+      {value: '1978'},
+      {value: '1977'},
+      {value: '1976'},
+      {value: '1975'},
+      {value: '1974'},
+      {value: '1973'},
+      {value: '1972'},
+      {value: '1971'},
+      {value: '1970'},
+      {value: '1969'},
+      {value: '1968'},
+      {value: '1967'},
+      {value: '1966'},
+      {value: '1965'},
+      {value: '1964'},
+      {value: '1963'},
+      {value: '1962'},
+      {value: '1961'},
+      {value: '1960'},
+      {value: '1959'},
+      {value: '1958'},
+      {value: '1957'},
+      {value: '1956'},
+      {value: '1955'},
+      {value: '1954'},
+      {value: '1953'},
+      {value: '1952'},
+      {value: '1951'},
+      {value: '1950'},
+      {value: '1949'},
+      {value: '1948'},
+      {value: '1947'},
+      {value: '1946'},
+      {value: '1945'},
+      {value: '1944'},
+      {value: '1943'},
+      {value: '1942'},
+      {value: '1941'},
+      {value: '1940'}
+    ];
+
+
+
+    // cloudinary image upload boject...
     vm.cloudObj = {
       url: 'https://api.cloudinary.com/v1_1/holtdinary/upload',
       data: {
@@ -188,6 +329,7 @@
       }
     };
 
+    // form manipulation method...
     function submitVehicle() {
       console.log(this);
       
@@ -208,6 +350,5 @@
     }
 
     vm.submitVehicle = submitVehicle;
-
   }
 })();

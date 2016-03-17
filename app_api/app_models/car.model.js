@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var CarSchema = new Schema({
-  brand: {
+  carBrand: {
     type: String,
     required: true,
   },

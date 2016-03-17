@@ -5,27 +5,30 @@
 
   <div class="row">
     <div class="col-md-12">
-      <form ng-submit="sell.submitVehicle()" name="submit-vehicle">
+      <form ng-submit="sell.submitVehicle()" name="submit-vehicle" ng-switch="sell.categorySelect">
 
         <!-- First Data group-->
         <div class="col-md-4 col-md-offset-2 col-sm-6">
           <label class="sell-label text-center" for="category">Category</label>
           <select required class="form-control" name="category" ng-model="sell.categorySelect">
-            <option>---</option>
             <option ng-repeat="cat in sell.category" value="{{cat.value}}">{{cat.value}}</option>
           </select>
+          <!-- brand options if category = car-->
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="car-brand">Car Brand</label>
+            <select required class="form-control" name="car-brand" ng-model="sell.carBrandSelect">
 
-          <label class="sell-label text-center" for="car-brand">Car Brand</label>
-          <select required class="form-control" name="car-brand" ng-model="sell.carBrandSelect">
-            <option>---</option>
-            <option ng-repeat="brand in sell.carBrand" value="{{brand.value}}">{{brand.value}}</option>
-          </select>
+              <option ng-repeat="brand in sell.carBrand" value="{{brand.value}}">{{brand.value}}</option>
+            </select>
+          </div>
+          <!-- brand options if category = motorcycle-->
+          <div ng-switch-when="motorcycle">
+            <label class="sell-label text-center" for="moto-brand">Motorcycle Brand</label>
+            <select required class="form-control" name="moto-brand" ng-model="sell.motoBrandSelect">
 
-          <label class="sell-label text-center" for="moto-brand">Motorcycle Brand</label>
-          <select required class="form-control" name="moto-brand" ng-model="sell.motoBrandSelect">
-            <option>---</option>
-            <option ng-repeat="brand in sell.motoBrand" value="{{brand.value}}">{{brand.value}}</option>
-          </select>
+              <option ng-repeat="brand in sell.motoBrand" value="{{brand.value}}">{{brand.value}}</option>
+            </select>
+          </div>
 
           <label class="sell-label text-center" for="model">Model</label>
           <input required class="form-control" type="text" name="model" placeholder="Model" ng-model="sell.model">
@@ -38,25 +41,28 @@
 
           <label class="sell-label text-center" for="condition">Condition</label>
           <select required class=" form-control" name="condition" ng-model="sell.conditionSelect">
-            <option>---</option>
             <option ng-repeat="cond in sell.condition" value="{{cond.value}}">{{cond.value}}</option>
           </select>
 
-          <label class="sell-label text-center" for="doors">Doors</label>
-          <div class="input-group">
-            <select required class=" form-control" name="doors" ng-model="sell.doorsSelect">
-              <option>---</option>
-              <option ng-repeat="door in sell.doors" value="{{door.value}}">{{door.value}}</option>
-            </select>
-            <div class="input-group-addon">Doors</div>
+          <!-- Select doors activates if category = car -->
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="doors">Doors</label>
+            <div class="input-group">
+              <select required class=" form-control" name="doors" ng-model="sell.doorsSelect">
+
+                <option ng-repeat="door in sell.doors" value="{{door.value}}">{{door.value}}</option>
+              </select>
+              <div class="input-group-addon">Doors</div>
+            </div>
           </div>
 
-          <label class="sell-label text-center" for="drive-train">Drive Train Type</label>
-          <select required class=" form-control" name="drive-train" ng-model="sell.driveType">
-            <option>---</option>
-            <option ng-repeat="drive in sell.driveTrain" value="{{drive.value}}">{{drive.name}}</option>
-          </select>
-
+          <!-- Select driveTrain activates if category = car -->
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="drive-train">Drive Train Type</label>
+            <select required class=" form-control" name="drive-train" ng-model="sell.driveType">
+              <option ng-repeat="drive in sell.driveTrain" value="{{drive.value}}">{{drive.name}}</option>
+            </select>
+          </div>
           <label class="sell-label text-center" for="engine-type">Engine Type</label>
           <input class="form-control" type="text" name="engine-type" placeholder="Engine Type" ng-model="sell.engineType">
 
@@ -66,23 +72,28 @@
 
         <!-- Second Data group-->
         <div class="col-md-4 col-sm-6">
-          <label class="sell-label text-center" for="transmition">Transmition</label>
-          <select required class="form-control" name="transmition" ng-model="sell.trans">
-            <option>---</option>
-            <option ng-repeat="trans in sell.transmition" value="{{trans.value}}">{{trans.name}}</option>
-          </select>
+          <!-- Select transmition activates if category = car -->
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="transmition">Transmition</label>
+            <select required class="form-control" name="transmition" ng-model="sell.trans">
+              <option ng-repeat="trans in sell.transmition" value="{{trans.value}}">{{trans.name}}</option>
+            </select>
+          </div>
 
-          <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
-          <select required class=" form-control" name="fuel-type" ng-model="sell.fuelTypeSelect">
-            <option>---</option>
-            <option ng-repeat="fuel in sell.fuelType" value="{{fuel.value}}">{{fuel.value}}</option>
-          </select>
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
+            <select required class=" form-control" name="fuel-type" ng-model="sell.fuelTypeSelect">
 
-          <label class="sell-label text-center" for="body-style">Body Style</label>
-          <select required class="form-control" name="body-style" ng-model="sell.bodyStyleSelect">
-            <option>---</option>
-            <option ng-repeat="body in sell.bodyStyle" value="{{body.value}}">{{body.name}}</option>
-          </select>
+              <option ng-repeat="fuel in sell.fuelType" value="{{fuel.value}}">{{fuel.value}}</option>
+            </select>
+          </div>
+
+          <div ng-switch-when="car">
+            <label class="sell-label text-center" for="body-style">Body Style</label>
+            <select required class="form-control" name="body-style" ng-model="sell.bodyStyleSelect">
+              <option ng-repeat="body in sell.bodyStyle" value="{{body.value}}">{{body.name}}</option>
+            </select>
+          </div>
 
           <label class="sell-label text-center" for="mileage">Mileage</label>
           <div class="input-group">
@@ -93,8 +104,8 @@
           <label class="sell-label text-center" for="modifications">Vehicle Modifications</label>
           <textarea class=" form-control" name="modifications" cols="30" rows="6" placeholder="Vehicle Modifications" ng-model="sell.mods"></textarea>
 
-          <label class="sell-label text-center" for="plate">Car Plate</label>
-          <input class="form-control" type="text" name="plate" placeholder="Car Plate" ng-model="sell.plate">
+          <label class="sell-label text-center" for="plate">Vehicle Plate</label>
+          <input class="form-control" type="text" name="plate" placeholder="vehicle Plate" ng-model="sell.plate">
 
           <label class="sell-label text-center" for="power">Power Output</label>
           <div class="input-group">
@@ -109,13 +120,13 @@
           </div>
           <label class="sell-label text-center" for="rebuilt">Rebuilt</label>
           <select required class=" form-control" name="rebuilt" ng-model="sell.rebuilt">
-            <option>---</option>
+
             <option ng-repeat="rebuild in sell.rebuild" value="{{rebuild.value}}">{{rebuild.name}}</option>
           </select>
 
           <label class="sell-label text-center" for="year">Year</label>
           <select required class="form-control" name="year"  ng-model="sell.yearSelect">
-            <option>---</option>
+
             <option ng-repeat="year in sell.year" value="{{year.value}}">{{year.value}}</option>
           </select>
 
@@ -124,7 +135,7 @@
         </div>
 
         <!-- Extras -->
-        <div class="col-md-8 col-md-offset-2  col-sm-12 col-xs-12 extras-container">
+        <div class="col-md-8 col-md-offset-2  col-sm-12 col-xs-12 extras-container" ng-switch-when="car">
           <label class="sell-label text-center extras-label" for="extras">Extras</label>
           <fieldset name="extras">
             <div class="col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3">

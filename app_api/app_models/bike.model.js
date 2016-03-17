@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var BikeSchema = new Schema({
-  brand: {
+  motoBrand: {
     type: String,
     required: true,
   },
@@ -27,9 +27,6 @@ var BikeSchema = new Schema({
     required: true,
   },
   engineType: String,
-  extras: {
-    type: String
-  },
   images: Array,
   mileage: {
     type: Number,

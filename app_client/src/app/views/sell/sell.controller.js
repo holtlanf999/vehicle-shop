@@ -342,7 +342,13 @@
       .success(function (data, status, headers, config) {
         console.log('image URL: ', data.url);
         vehicle.images = [data.url]; /*its an array to match the model when uploaded to db*/
-
+        if (vehicle.category == 'car') {
+          console.log(vehicle.category);
+          console.log(vehicle);
+        } else {
+          console.log(vehicle.category);
+          console.log(vehicle);
+        }
       })
       .error(function (data, status, headers, config) {
         console.log('error');

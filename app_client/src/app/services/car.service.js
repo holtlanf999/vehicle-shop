@@ -2,17 +2,17 @@
   'use strict';
   angular
   .module('appClient')
-  .service('carService', ['$http', carData]);
+  .factory('carService', function($http) {
+    var carService = {
+      async: function() {
+        var getVehicle = $http.get('//localhost:4000/main/car').then(function (res) {
+          // console.log(res.data);
+          return res.data;
+        })
+        return getVehicle;
+      }
+    }
+    return carService;
+  });
 
-  function carData ($http) {
-    $http.get('//localhost:4000/main/car')
-    .then(function (res) {
-      return res;
-    }),
-
-    /*error handler*/
-    function getError (res) {
-      return console.log('Error', res);
-    };
-  }
 })();

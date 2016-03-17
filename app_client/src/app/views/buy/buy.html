@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ngController="BuyController as buy">
   <div class="row">
     <acme-navbar></acme-navbar>
   </div>
@@ -9,7 +9,7 @@
       <form class="form-inline" action="search">
         <div class="form-group">
         <label class="buy-search-form-label">Filter By</label>
-          <select class="form-control buy-search-form">
+          <select class="form-control buy-search-form" ng-switch="buy.category">
             <option>Category</option>
             <option value="car">Car</option>
             <option value="motorcycle">Motorcycle</option>
@@ -38,41 +38,31 @@
   <!-- Products Displayed -->
   <div class="row">
     <!-- convert this "buy-product-container" to a directive and use ng-repeat to populate the view -->
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
+
+    <!-- <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
       <a ng-href="#/product-detail">
         <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
         <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
         <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
       </a>
-    </div>
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
+    </div> -->
+    
+    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container" ng-repeat="vehicles in buy.cars" ng-switch-when="car">
       <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
+        <h3 class="h3 buy-product-title">{{vehicle.carModel}}</h3>
         <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
+        <h4 class="h4 buy-product-price">{{vehicle.price}}</h4>
       </a>
     </div>
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
+
+    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container" ng-repeat="vehicles in buy.bikes" ng-switch-when="motorcycle">
       <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
+        <h3 class="h3 buy-product-title">{{vehicle.motoModel}}</h3>
         <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
+        <h4 class="h4 buy-product-price">{{vehicle.price}}</h4>
       </a>
     </div>
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
-      <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
-        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
-      </a>
-    </div>
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
-      <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
-        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
-      </a>
-    </div>
+
   </div>
 
   <div class="row">

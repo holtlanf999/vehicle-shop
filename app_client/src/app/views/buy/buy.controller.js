@@ -8,6 +8,24 @@
   /** @ngInject */
   function BuyController(carService, bikeService) {
     var vm = this;
-    console.log('service in controller: ', bikeService);
+
+    vm.category = [
+      {value: 'car'},
+      {value: 'motorcycle'}
+    ];
+
+    function init() {
+      carService.async().then(function (data) {
+        vm.cars = data;
+        console.log(vm.cars);
+      });
+
+      bikeService.async().then(function (data) {
+        vm.bikes = data;
+        console.log(vm.bikes);
+      });
+    }
+    init();    
   }
 })();
+

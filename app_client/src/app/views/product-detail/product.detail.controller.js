@@ -3,11 +3,16 @@
 
   angular
     .module('appClient')
-    .controller('productDetailController', productDetailController);
+    .controller('productDetailController', ['userService','carService', 'bikeService', productDetailController]);
 
   /** @ngInject */
-  function productDetailController() {
+  function productDetailController(userService, carService, bikeService) {
     var vm = this;
+
+    // console.log('userService: ', userService);
+    console.log('carService: ', carService.car);
+    console.log('bikeService: ', bikeService);
+    
     vm.images = 
     [
       {
@@ -38,5 +43,28 @@
         description: "vehicle-image"
       }
     ]
+    /* vm.category = ,
+    vm.model = ,
+    vm.color = ,
+    vm.carBrand = ,
+    vm.comment = , 
+    vm.condition = ,
+    vm.motoBrand = ,
+    vm.doors = ,
+    vm.driveTrain = , 
+    vm.engine = ,
+    vm.displacement = , 
+    vm.trans = ,
+    vm.fuelType = ,
+    vm.bodyStyle = ,
+    vm.milleage = ,
+    vm.mods = ,
+    vm.plate = ,
+    vm.power = ,
+    vm.price = ,
+    vm.rebuilt = ,
+    vm.year = ,
+    vm.images =*/ 
   }
+
 })();

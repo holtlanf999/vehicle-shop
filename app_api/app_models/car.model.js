@@ -71,7 +71,7 @@ var CarSchema = new Schema({
     type: Number,
     required: true
   },
-  extras: {};
+  extras: {}
   /*powerSteering: String,
   tintedGlass: String,
   powerMirrors: String,

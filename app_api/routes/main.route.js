@@ -121,7 +121,7 @@ module.exports = function (app) {
       if (error) {
         res.end('An error has occured', error.statusCode);
       }
-      res.send(response.body.data);
+      res.send(response.data);
     });
   });
 

@@ -5,396 +5,122 @@
 
   <div class="row">
     <div class="col-md-12">
-      <form ng-submit="sell.submitVehicle()">
+      <form ng-submit="sell.submitVehicle()" name="submit-vehicle">
 
         <!-- First Data group-->
         <div class="col-md-4 col-md-offset-2 col-sm-6">
           <label class="sell-label text-center" for="category">Category</label>
-          <select required class="form-control" name="category" id="category">
-            <option value="">---</option>
-            <option value="car">Car</option>
-            <option value="motorcycle">Motorcycle</option>
+          <select required class="form-control" name="category" ng-model="sell.categorySelect">
+            <option>---</option>
+            <option ng-repeat="cat in sell.category" value="{{cat.value}}">{{cat.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="car-brand">Car Brand</label>
-          <select required class="form-control" name="car-brand" id="car-brand">
-            <option value="">---</option>
-            <option value="acura">Acura</option>
-            <option value="alfa_romeo">Alfa Romeo</option>
-            <option value="alpina">Alpina</option>
-            <option value="aston_martin">Aston Martin</option>
-            <option value="audi">Audi</option>
-            <option value="austin">Austin</option>
-            <option value="auverland">Auverland</option>
-            <option value="beijing">Beijing</option>
-            <option value="bentley">Bentley</option>
-            <option value="bmw">BMW</option>
-            <option value="bristol">Bristol</option>
-            <option value="bugatti">Bugatti</option>
-            <option value="buick">Buick</option>
-            <option value="cadillac">Cadillac</option>
-            <option value="caterham">Caterham</option>
-            <option value="chevrolet">Chevrolet</option>
-            <option value="chrysler">Chrysler</option>
-            <option value="citroen">Citroen</option>
-            <option value="daewoo">Daewoo</option>
-            <option value="daihatsu">Daihatsu</option>
-            <option value="Datsun">Datsun</option>
-            <option value="de_tomaso">De Tomaso</option>
-            <option value="dodge">Dodge</option>
-            <option value="donkervoort">Donkervoort</option>
-            <option value="eagle">Eagle</option>
-            <option value="ferrari">Ferrari</option>
-            <option value="fiat">Fiat</option>
-            <option value="ford">Ford</option>
-            <option value="ginetta">Ginetta</option>
-            <option value="gmc">GMC</option>
-            <option value="holden">Holden</option>
-            <option value="honda">Honda</option>
-            <option value="hyundai">Hyundai</option>
-            <option value="infiniti">Infiniti</option>
-            <option value="isuzu">Isuzu</option>
-            <option value="italdesign">Italdesign</option>
-            <option value="jaguar">Jaguar</option>
-            <option value="jeep">Jeep</option>
-            <option value="jensen">Jensen</option>
-            <option value="kia">Kia</option>
-            <option value="lada">Lada</option>
-            <option value="lamborghini">Lamborghini</option>
-            <option value="lancia">Lancia</option>
-            <option value="land-rover">Land Rover</option>
-            <option value="lexus">Lexus</option>
-            <option value="lincoln">Lincoln</option>
-            <option value="lotec">Lotec</option>
-            <option value="lotus">Lotus</option>
-            <option value="mahindra">Mahindra</option>
-            <option value="marcos">Marcos</option>
-            <option value="maserati">Maserati</option>
-            <option value="mazda">Mazda</option>
-            <option value="mclaren">McLaren</option>
-            <option value="mercedes_benz">Mercedes-Benz</option>
-            <option value="mercury">Mercury</option>
-            <option value="mg">MG</option>
-            <option value="mini">Mini</option>
-            <option value="mitsubishi">Mitsubishi</option>
-            <option value="morgan">Morgan</option>
-            <option value="nissan">Nissan</option>
-            <option value="oldsmobile">Oldsmobile</option>
-            <option value="opel">Opel</option>
-            <option value="peugeot">Peugeot</option>
-            <option value="plymouth">Plymouth</option>
-            <option value="pontiac">Pontiac</option>
-            <option value="porsche">Porsche</option>
-            <option value="proton">Proton</option>
-            <option value="reliant">Reliant</option>
-            <option value="renault">Renault</option>
-            <option value="rolls_royce">Rolls-Royce</option>
-            <option value="rover">Rover</option>
-            <option value="saab">Saab</option>
-            <option value="seat">Seat</option>
-            <option value="skoda">Skoda</option>
-            <option value="steyr">Steyr</option>
-            <option value="subaru">Subaru</option>
-            <option value="suzuki">Suzuki</option>
-            <option value="tata">Tata</option>
-            <option value="toyota">Toyota</option>
-            <option value="tvr">TVR</option>
-            <option value="vauxhall">Vauxhall</option>
-            <option value="venturi">Venturi</option>
-            <option value="volkswagen">Volkswagen</option>
-            <option value="volvo">Volvo</option>
-            <option value="westfield">Westfield</option>
-            <option value="xedos">Xedos</option>
-            <option value="zastava">Zastava</option>
-            <option value="zaz">ZAZ</option>
+          <select required class="form-control" name="car-brand" ng-model="sell.carBrandSelect">
+            <option>---</option>
+            <option ng-repeat="brand in sell.carBrand" value="{{brand.value}}">{{brand.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="moto-brand">Motorcycle Brand</label>
-          <select required class="form-control" name="moto-brand" id="moto-brand">
-            <option value="">---</option>
-            <option value="ahm">AHM</option>
-            <option value="akt">AKT</option>
-            <option value="aprilia">Aprilia</option>
-            <option value="argo">Argo</option>
-            <option value="articcat">Artic Cat</option>
-            <option value="bmw">BMW</option>
-            <option value="bsa">BSA</option>
-            <option value="bajaj">Bajaj</option>
-            <option value="benelli">Benelli</option>
-            <option value="bombardier">Bombardier</option>
-            <option value="buell">Buell</option>
-            <option value="bultaco">Bultaco</option>
-            <option value="canam">CAN-AM</option>
-            <option value="cfmoto">CFMOTO</option>
-            <option value="cagiva">Cagiva</option>
-            <option value="cobra">Cobra</option>
-            <option value="daelim">Daelim</option>
-            <option value="dinly">Dinly</option>
-            <option value="ducati">Ducati</option>
-            <option value="electrobike">Electro Bike</option>
-            <option value="formula">Formula</option>
-            <option value="freedom">Freedom</option>
-            <option value="gasgas">Gas Gas</option>
-            <option value="geeley">Geeley</option>
-            <option value="genesis">Genesis</option>
-            <option value="haojue">Haojue</option>
-            <option value="harley_davidson">Harley Davidson</option>
-            <option value="hero">Hero</option>
-            <option value="honda">Honda</option>
-            <option value="husaberg">Husaberg</option>
-            <option value="husqvarna">Husqvarna</option>
-            <option value="hyosung">Hyosung</option>
-            <option value="jawa">Jawa</option>
-            <option value="jialing">Jialing</option>
-            <option value="ktm">KTM</option>
-            <option value="katana">Katana</option>
-            <option value="kawasaki">Kawasaki</option>
-            <option value="keeway">Keeway</option>
-            <option value="kinetic">Kinetic</option>
-            <option value="kymco">Kymco</option>
-            <option value="lml">LML</option>
-            <option value="lifan">Lifan</option>
-            <option value="loncin">Loncin</option>
-            <option value="mv_augusta">MV Agusta</option>
-            <option value="mz">MZ</option>
-            <option value="montesa">Montesa</option>
-            <option value="motocruiser">Moto Cruiser</option>
-            <option value="motoguzzi">Moto Guzzi</option>
-            <option value="mototek">Moto Tek</option>
-            <option value="motoped">Motoped</option>
-            <option value="nsu">NSU</option>
-            <option value="osaka">Osaka</option>
-            <option value="ossa">Ossa</option>
-            <option value="peugeot">Peugeot</option>
-            <option value="piaggio">Piaggio</option>
-            <option value="pitster">Pitster</option>
-            <option value="polaris">Polaris</option>
-            <option value="qingqui">Qingqui</option>
-            <option value="rokk">Rokk</option>
-            <option value="ssr">SSR</option>
-            <option value="sym">SYM</option>
-            <option value="sachs">Sachs</option>
-            <option value="sangyang">Sang Yang</option>
-            <option value="senke">Senke</option>
-            <option value="serpento">Serpento</option>
-            <option value="sherco">Sherco</option>
-            <option value="sinski">Sinski</option>
-            <option value="spazzio">Spazzio</option>
-            <option value="sukida">Sukida</option>
-            <option value="suzuki">Suzuki</option>
-            <option value="tgb">TGB</option>
-            <option value="tvs">TVS</option>
-            <option value="triumph">Triumph</option>
-            <option value="um">UM</option>
-            <option value="ybico">Unico</option>
-            <option value="vento">Vento</option>
-            <option value="vespa">Vespa</option>
-            <option value="victory">Victory</option>
-            <option value="yamaha">Yamaha</option>
-            <option value="yumbo">Yumbo</option>
-            <option value="zongshen">Zongshen</option>
-            <option value="zundapp">Zundapp</option>
+          <select required class="form-control" name="moto-brand" ng-model="sell.motoBrandSelect">
+            <option>---</option>
+            <option ng-repeat="brand in sell.motoBrand" value="{{brand.value}}">{{brand.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="model">Model</label>
-          <input required class="form-control" type="text" name="model" placeholder="Model">
+          <input required class="form-control" type="text" name="model" placeholder="Model" ng-model="sell.model">
 
           <label class="sell-label text-center" for="color">Color</label>
-          <input required class="form-control" type="color" name="color">
+          <input required class="form-control" type="color" name="color" ng-model="sell.color">
 
           <label class="sell-label text-center" for="comment">Comment</label>
-          <textarea class="form-control" name="comment" id="comment" cols="30" rows="6" placeholder="Comment"></textarea>
+          <textarea class="form-control" name="comment" cols="30" rows="6" placeholder="Comment" ng-model="sell.comment"></textarea>
 
           <label class="sell-label text-center" for="condition">Condition</label>
-          <select required class=" form-control" name="condition" id="condition">
-            <option value="">---</option>
-            <option value="new">New</option>
-            <option value="used">Used</option>
-            <option value="wrecked">Wrecked</option>
+          <select required class=" form-control" name="condition" ng-model="sell.conditionSelect">
+            <option>---</option>
+            <option ng-repeat="cond in sell.condition" value="{{cond.value}}">{{cond.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="doors">Doors</label>
           <div class="input-group">
-            <select required class=" form-control" name="doors" id="doors">
-              <option value="">---</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+            <select required class=" form-control" name="doors" ng-model="sell.doorsSelect">
+              <option>---</option>
+              <option ng-repeat="door in sell.doors" value="{{door.value}}">{{door.value}}</option>
             </select>
             <div class="input-group-addon">Doors</div>
           </div>
 
           <label class="sell-label text-center" for="drive-train">Drive Train Type</label>
-          <select required class=" form-control" name="drive-train" id="drive-train">
-            <option value="">---</option>
-            <option value="fwd">Front Wheel Drive (FWD)</option>
-            <option value="rwd">Rear Wheel Drive (RWD)</option>
-            <option value="awd">All Wheel Drive (AWD)</option>
-            <option value="4x4">All Terrain (4X4)</option>
-            <option value="6x6">All Terrain (6X6)</option>
+          <select required class=" form-control" name="drive-train" ng-model="sell.driveType">
+            <option>---</option>
+            <option ng-repeat="drive in sell.driveTrain" value="{{drive.value}}">{{drive.name}}</option>
           </select>
 
           <label class="sell-label text-center" for="engine-type">Engine Type</label>
-          <input class="form-control" type="text" name="engine-type" placeholder="Engine Type">
+          <input class="form-control" type="text" name="engine-type" placeholder="Engine Type" ng-model="sell.engineType">
 
           <label class="sell-label text-center" for="engine-displacement">Engine Displacement (cc)</label>
-          <input required class="form-control" type="number" name="engine-displacement" placeholder="Engine Displacement (cc)">
+          <input required class="form-control" type="number" name="engine-displacement" placeholder="Engine Displacement (cc)" ng-model="sell.displacement">
         </div>
 
         <!-- Second Data group-->
         <div class="col-md-4 col-sm-6">
           <label class="sell-label text-center" for="transmition">Transmition</label>
-          <select required class="form-control" name="transmition">
-            <option value="">---</option>
-            <option value="manual">Manual Transmition</option>
-            <option value="automatic">Automatic transmition</option>
+          <select required class="form-control" name="transmition" ng-model="sell.trans">
+            <option>---</option>
+            <option ng-repeat="trans in sell.transmition" value="{{trans.value}}">{{trans.name}}</option>
           </select>
 
           <label class="sell-label text-center" for="fuel-type">Fuel Type</label>
-          <select required class=" form-control" name="fuel-type" id="fuel-type">
-            <option value="">---</option>
-            <option value="gasoline">Gasoline</option>
-            <option value="diesel">Diesel</option>
-            <option value="hibrid">Hybrid</option>
-            <option value="electric">Electric</option>
+          <select required class=" form-control" name="fuel-type" ng-model="sell.fuelTypeSelect">
+            <option>---</option>
+            <option ng-repeat="fuel in sell.fuelType" value="{{fuel.value}}">{{fuel.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="body-style">Body Style</label>
-          <select required class="form-control" name="body-style" id="Body Style">
-            <option value="">---</option>
-            <option value="suv">Suv</option>
-            <option value="truck">Truck</option>
-            <option value="sedan">Sedan</option>
-            <option value="van">Van</option>
-            <option value="coupe">Coupe</option>
-            <option value="wagon">Wagon</option>
-            <option value="convertible">Convertible</option>
-            <option value="sports car">Sports car</option>
-            <option value="crossover">Crossover</option>
-            <option value="luxury">Luxury</option>
-            <option value="hatchback">Hatchback</option>
+          <select required class="form-control" name="body-style" ng-model="sell.bodyStyleSelect">
+            <option>---</option>
+            <option ng-repeat="body in sell.bodyStyle" value="{{body.value}}">{{body.name}}</option>
           </select>
 
           <label class="sell-label text-center" for="mileage">Mileage</label>
           <div class="input-group">
-          <input class="form-control" type="number" name="mileage" placeholder="Mileage">
-          <div class="input-group-addon">Miles</div>
+            <input class="form-control" type="number" name="mileage" placeholder="Mileage" ng-model="sell.milleage">
+            <div class="input-group-addon">Miles</div>
           </div>
 
           <label class="sell-label text-center" for="modifications">Vehicle Modifications</label>
-          <textarea class=" form-control" name="modifications" id="modifications" cols="30" rows="6" placeholder="Vehicle Modifications"></textarea>
+          <textarea class=" form-control" name="modifications" cols="30" rows="6" placeholder="Vehicle Modifications" ng-model="sell.mods"></textarea>
 
           <label class="sell-label text-center" for="plate">Car Plate</label>
-          <input class="form-control" type="text" name="plate" placeholder="Car Plate">
+          <input class="form-control" type="text" name="plate" placeholder="Car Plate" ng-model="sell.plate">
 
           <label class="sell-label text-center" for="power">Power Output</label>
           <div class="input-group">
-            <input class="form-control" type="text" name="power" placeholder="Power Output">
+            <input class="form-control" type="text" name="power" placeholder="Power Output" ng-model="sell.power">
             <div class="input-group-addon">HP</div>
           </div>
 
           <label class="sell-label text-center" for="price">Vehicle Price</label>
           <div class="input-group">
-            <input required class="form-control" type="number" name="price" placeholder="Vehicle Price">
+            <input required class="form-control" type="number" name="price" placeholder="Vehicle Price" ng-model="sell.price">
             <div class="input-group-addon">$</div>
           </div>
           <label class="sell-label text-center" for="rebuilt">Rebuilt</label>
-          <select required class=" form-control" name="rebuilt" id="rebuilt">
-            <option value="">---</option>
-            <option  value="false">No</option>
-            <option  value="true">Yes</option>
+          <select required class=" form-control" name="rebuilt" ng-model="sell.rebuilt">
+            <option>---</option>
+            <option ng-repeat="rebuild in sell.rebuild" value="{{rebuild.value}}">{{rebuild.name}}</option>
           </select>
 
           <label class="sell-label text-center" for="year">Year</label>
-          <select required class="form-control" name="year" id="year">
-            <option value="">---</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-            <option value="2014">2014</option>
-            <option value="2013">2013</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
-            <option value="2010">2010</option>
-            <option value="2009">2009</option>
-            <option value="2008">2008</option>
-            <option value="2007">2007</option>
-            <option value="2006">2006</option>
-            <option value="2005">2005</option>
-            <option value="2004">2004</option>
-            <option value="2003">2003</option>
-            <option value="2002">2002</option>
-            <option value="2001">2001</option>
-            <option value="2000">2000</option>
-            <option value="1999">1999</option>
-            <option value="1998">1998</option>
-            <option value="1997">1997</option>
-            <option value="1996">1996</option>
-            <option value="1995">1995</option>
-            <option value="1994">1994</option>
-            <option value="1993">1993</option>
-            <option value="1992">1992</option>
-            <option value="1991">1991</option>
-            <option value="1990">1990</option>
-            <option value="1989">1989</option>
-            <option value="1988">1988</option>
-            <option value="1987">1987</option>
-            <option value="1986">1986</option>
-            <option value="1985">1985</option>
-            <option value="1984">1984</option>
-            <option value="1983">1983</option>
-            <option value="1982">1982</option>
-            <option value="1981">1981</option>
-            <option value="1980">1980</option>
-            <option value="1979">1979</option>
-            <option value="1978">1978</option>
-            <option value="1977">1977</option>
-            <option value="1976">1976</option>
-            <option value="1975">1975</option>
-            <option value="1974">1974</option>
-            <option value="1973">1973</option>
-            <option value="1972">1972</option>
-            <option value="1971">1971</option>
-            <option value="1970">1970</option>
-            <option value="1969">1969</option>
-            <option value="1968">1968</option>
-            <option value="1967">1967</option>
-            <option value="1966">1966</option>
-            <option value="1965">1965</option>
-            <option value="1964">1964</option>
-            <option value="1963">1963</option>
-            <option value="1962">1962</option>
-            <option value="1961">1961</option>
-            <option value="1960">1960</option>
-            <option value="1959">1959</option>
-            <option value="1958">1958</option>
-            <option value="1957">1957</option>
-            <option value="1956">1956</option>
-            <option value="1955">1955</option>
-            <option value="1954">1954</option>
-            <option value="1953">1953</option>
-            <option value="1952">1952</option>
-            <option value="1951">1951</option>
-            <option value="1950">1950</option>
-            <option value="1949">1949</option>
-            <option value="1948">1948</option>
-            <option value="1947">1947</option>
-            <option value="1946">1946</option>
-            <option value="1945">1945</option>
-            <option value="1944">1944</option>
-            <option value="1943">1943</option>
-            <option value="1942">1942</option>
-            <option value="1941">1941</option>
-            <option value="1940">1940</option>
+          <select required class="form-control" name="year"  ng-model="sell.yearSelect">
+            <option>---</option>
+            <option ng-repeat="year in sell.year" value="{{year.value}}">{{year.value}}</option>
           </select>
 
           <label class="sell-label text-center" for="images">Images</label>
-<!--           <input id='img-upload' class="form-control" type="file" name="images"> -->
-          
-          <button class="form-control" ngf-select="uploadFiles($files, $invalidFiles)" multiple accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Add vehicle photos</button>
-
+          <input id='img-upload' class="form-control" type="file" name="images">
         </div>
 
         <!-- Extras -->
@@ -403,59 +129,59 @@
           <fieldset name="extras">
             <div class="col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3">
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="power_steering">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power-steering" ng-model="sell.pwrSteering">
                 <label class="sell-checkbox-label" for="power-steering"> Power Steering</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="tinted_glass">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="tinted-glass" ng-model="sell.glass">
                 <label class="sell-checkbox-label" for="tinted-glass"> Tinted glass</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="power_mirrors">
-                <label class="sell-checkbox-label" for="power-mirrors"> Power Mirrors</label>
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power-mirrors">
+                <label class="sell-checkbox-label" for="power-mirrors" ng-model="sell.pwrMirrors"> Power Mirrors</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="ac">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="ac" ng-model="sell.ac">
                 <label class="sell-checkbox-label" for="ac"> A/C</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="luxury_rims">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="luxury-rims" ng-model="sell.rims">
                 <label class="sell-checkbox-label" for="luxury-rims"> Luxury Rims</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="halogen_lights">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="halogen-lights" ng-model="sell.halogen">
                 <label class="sell-checkbox-label" for="halogen-lights"> Halogen Lights</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="cruise_control">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="cruise-control" ng-model="sell.cruise">
                 <label class="sell-checkbox-label" for="cruise-control"> Cruise Control</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="electronic_stability_control">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="electronic-stability-control" ng-model="sell.esc">
                 <label class="sell-checkbox-label" for="electronic-stability-control"> ESC</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing_camera">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing-camera" ng-model="sell.reverseCam">
                 <label class="sell-checkbox-label" for="reversing-camera"> Reversing Camera</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="steering_wheel_radio_controls">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="steering-wheel-radio-controls" ng-model="sell.wheelCtrls">
                 <label class="sell-checkbox-label" for="steering-wheel-radio-controls"> Steering Wheel Controls</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="memory_seats">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="memory-seats" ng-model="sell.memSeats">
                 <label class="sell-checkbox-label" for="memory-seats"> Memory Seats</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="travel_computer">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="travel-computer"  ng-model="sell.travelCpu">
                 <label class="sell-checkbox-label" for="travel-computer"> Travel Computer</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="rain_sensor">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="rain-sensor"  ng-model="sell.rainSensor">
                 <label class="sell-checkbox-label" for="rain-sensor"> Rain Sensor</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="airbags">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="airbags" ng-model="sell.airbags">
                 <label class="sell-checkbox-label" for="airbags"> Airbags</label>
               </div>
             </div>
@@ -465,55 +191,55 @@
                 <label class="sell-checkbox-label" for="alarm"> Alarm</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="defroster">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="defroster"  ng-model="sell.defroster">
                 <label class="sell-checkbox-label" for="defroster"> Defroster</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="turbo">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="turbo" ng-model="sell.turbo">
                 <label class="sell-checkbox-label" for="turbo"> Turbo</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing_sensors">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="reversing-sensors" ng-model="sell.reverseSensors">
                 <label class="sell-checkbox-label" for="reversing-sensors"> Reversing Sensors</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="start_button">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="start-button"  ng-model="sell.startBtn">
                 <label class="sell-checkbox-label" for="start-button"> Start Button</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="smart_key">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="smart-key" ng-model="sell.smartKey">
                 <label class="sell-checkbox-label" for="smart-key"> Smart Key</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="adjustable_steering">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="adjustable-steering"  ng-model="sell.adjSteering">
                 <label class="sell-checkbox-label" for="adjustable-steering"> Adjustable Steering</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="power_seats">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power-seats" ng-model="sell.pwrSeats">
                 <label class="sell-checkbox-label" for="power-seats"> Power Seats</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="power_windows">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="power-windows" ng-model="sell.pwrWindows">
                 <label class="sell-checkbox-label" for="power-windows"> Power Windows</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="abs_breaks">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="abs-breaks" ng-model="sell.abs">
                 <label class="sell-checkbox-label" for="abs-breaks"> ABS Breaks</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="sunroof">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="sunroof" ng-model="sell.sunroof">
                 <label class="sell-checkbox-label" for="sunroof"> Sunroof</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="panoramic_roof">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="panoramic-roof" ng-model="sell.panRoof">
                 <label class="sell-checkbox-label" for="panoramic-roof"> Panoramic Roof</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="usb-aux-radio">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="usb-aux-radio" ng-model="sell.radioUsbAux">
                 <label class="sell-checkbox-label" for="usb-aux-radio"> Radio (USB-AUX)</label>
               </div>
               <div>
-                <input class="checkbox-inline" type="checkbox" name="extras" value="lcd-screen">
+                <input class="checkbox-inline" type="checkbox" name="extras" value="lcd-screen" ng-model="sell.lcdScreen">
                 <label class="sell-checkbox-label" for="lcd-screen"> LCD Screen</label>
               </div>
             </div>

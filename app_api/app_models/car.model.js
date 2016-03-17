@@ -71,7 +71,8 @@ var CarSchema = new Schema({
     type: Number,
     required: true
   },
-  powerSteering: String,
+  extras: {};
+  /*powerSteering: String,
   tintedGlass: String,
   powerMirrors: String,
   ac: String,
@@ -98,7 +99,7 @@ var CarSchema = new Schema({
   sunroof: String,
   panoramicRoof: String,
   usbAuxRadio: String,
-  ldcScreen: String
+  ldcScreen: String*/
 });
 
 var carModel = mongoose.model('Car', CarSchema);

@@ -184,9 +184,9 @@
     ];
 
     vm.condition = [
-      {value: "new"},
-      {value: "used"},
-      {value: "wrecked"}
+      {value: 'new'},
+      {value: 'used'},
+      {value: 'wrecked'}
     ];
 
     vm.doors = [
@@ -219,17 +219,17 @@
     ];
 
     vm.bodyStyle = [
-      {value: 'suv', name},
-      {value: 'truck', name},
-      {value: 'sedan', name},
-      {value: 'van', name},
-      {value: 'coupe', name},
-      {value: 'wagon', name},
-      {value: 'convertible', name},
-      {value: 'sports-car', name},
-      {value: 'crossover', name},
-      {value: 'luxury', name},
-      {value: 'hatchback', name},
+      {value: 'suv', name: 'SUV'},
+      {value: 'truck', name: 'Truck'},
+      {value: 'sedan', name: 'Sedan'},
+      {value: 'van', name: 'Van'},
+      {value: 'coupe', name: 'Coupe'},
+      {value: 'wagon', name: 'Wagon'},
+      {value: 'convertible', name: 'Convertible'},
+      {value: 'sports-car', name: 'Sports Car'},
+      {value: 'crossover', name: 'Crossover'},
+      {value: 'luxury', name: 'Luxury'},
+      {value: 'hatchback', name: 'Hatchback'},
     ];
 
     vm.rebuild = [
@@ -317,8 +317,6 @@
       {value: '1940'}
     ];
 
-
-
     // cloudinary image upload boject...
     vm.cloudObj = {
       url: 'https://api.cloudinary.com/v1_1/holtdinary/upload',
@@ -329,26 +327,29 @@
       }
     };
 
+    vm.uploadFiles = function ($files, $invalidFiles) {
+      console.log(uploadFiles);
+    };
+
     // form manipulation method...
-    function submitVehicle() {
-      console.log(this);
+    vm.submitVehicle = function () {
+
+      console.log('submitVehicle');
       
-      vm.cloudObj.data.file = document.querySelector('#img-upload').files[0];
+      // vm.cloudObj.data.file = document.querySelector('#img-upload').files[0];
 
-      var uploadImg = Upload.upload(vm.cloudObj)
-      .progress(function (param) {
-        var p = Math.round((param.loaded * 100.0) / param.total);
-        var status = "Uploading... " + p + "%";
-        console.log(status);
-      })
-      .success(function (data, status, headers, config) {
-        console.log(data.url);
-      })
-      .error(function (data, status, headers, config) {
-        console.log('error');
-      });
+      // var uploadImg = Upload.upload(vm.cloudObj)
+      // .progress(function (param) {
+      //   var p = Math.round((param.loaded * 100.0) / param.total);
+      //   var status = 'Uploading... ' + p + '%';
+      //   console.log(status);
+      // })
+      // .success(function (data, status, headers, config) {
+      //   console.log('image URL: ', data.url);
+      // })
+      // .error(function (data, status, headers, config) {
+      //   console.log('error');
+      // });
     }
-
-    vm.submitVehicle = submitVehicle;
   }
 })();

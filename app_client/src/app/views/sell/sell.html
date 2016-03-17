@@ -391,7 +391,10 @@
           </select>
 
           <label class="sell-label text-center" for="images">Images</label>
-          <input id='img-upload' class="form-control" type="file" name="images">
+<!--           <input id='img-upload' class="form-control" type="file" name="images"> -->
+          
+          <button class="form-control" ngf-select="uploadFiles($files, $invalidFiles)" multiple accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Add vehicle photos</button>
+
         </div>
 
         <!-- Extras -->

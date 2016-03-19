@@ -95,7 +95,7 @@
       {value: 'volvo'},
       {value: 'westfield'},
       {value: 'zastava'},
-      {value: 'zil'},
+      {value: 'zil'}
     ];
 
     vm.motoBrand = [
@@ -180,7 +180,7 @@
       {value: 'yamaha'},
       {value: 'yumbo'},
       {value: 'zongshen'},
-      {value: 'zundapp'},
+      {value: 'zundapp'}
     ];
 
     vm.condition = [
@@ -195,7 +195,7 @@
       {value: 3},
       {value: 4},
       {value: 5},
-      {value: 6},
+      {value: 6}
     ];
 
     vm.driveTrain = [
@@ -203,7 +203,7 @@
       {value: 'rwd', name: 'rear Wheel Drive (RWD)'},
       {value: 'awd', name: 'all Wheel Drive (AWD)'},
       {value: '4x4', name: 'all Terrain (4X4)'},
-      {value: '6x6', name: 'all Terrain (6X6)'},
+      {value: '6x6', name: 'all Terrain (6X6)'}
     ];
 
     vm.transmition = [
@@ -219,7 +219,7 @@
     ];
 
     vm.bodyStyle = [
-      {value: 'suv', name: 'sUV'},
+      {value: 'suv', name: 'suv'},
       {value: 'truck', name: 'truck'},
       {value: 'sedan', name: 'sedan'},
       {value: 'van', name: 'van'},
@@ -229,7 +229,7 @@
       {value: 'sports-car', name: 'sports Car'},
       {value: 'crossover', name: 'crossover'},
       {value: 'luxury', name: 'luxury'},
-      {value: 'hatchback', name: 'hatchback'},
+      {value: 'hatchback', name: 'hatchback'}
     ];
 
     vm.rebuild = [

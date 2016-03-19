@@ -6,28 +6,37 @@
   <!-- search form -->
   <div class="row">
     <div class="col-md-12">
-      <form class="form-inline" action="search">
+      <form class="form-inline" action="search" ng-switch="buy.category">
         <div class="form-group">
-        <label class="buy-search-form-label">Filter By</label>
-          <select class="form-control buy-search-form" ng-switch="buy.category">
-            <option>Category</option>
-            <option value="car">Car</option>
-            <option value="motorcycle">Motorcycle</option>
+          <label class="buy-search-form-label">Filter By</label>
+
+          <!-- category -->
+          <select class="form-control buy-search-form">
+            <option>category</option>
+            <option ng-repeat="cat in buy.category" value="{{cat.value}}">{{cat.value}}</option>
           </select>
 
+          <!-- condition -->
           <select class="form-control buy-search-form">
-            <option>Condition</option>
-            <option value="new">New</option>
-            <option value="used">Used</option>
-            <option value="wrecked">Wrecked</option>
+            <option>condition</option>
+            <option ng-repeat="cond in buy.condition" value="{{cond.value}}">{{cond.value}}</option>
           </select>
 
-          <select class="form-control buy-search-form">
-            <option>vehicle brand</option>
+          <!-- brand -->
+          <select class="form-control buy-search-form" ng-switch-when="car">
+            <option>car brand</option>
+            <option ng-repeat="brand in buy.carBrand" value="{{brand.value}}">{{brand.value}}</option>
           </select>
 
-          <select class="form-control buy-search-form">
-            <option>Body Style</option>
+          <select class="form-control buy-search-form" ng-switch-when="motorcycle">
+            <option>motorcycle brand</option>
+            <option ng-repeat="brand in buy.motoBrand" value="{{brand.value}}">{{brand.value}}</option>
+          </select>
+
+          <!-- body -->
+          <select class="form-control buy-search-form" ng-switch-when="car">
+            <option>bodyStyle</option>
+            <option ng-repeat="body in buy.bodyStyle" value="{{body.value}}">{{body.name}}</option>
           </select>
 
         </div>
@@ -37,29 +46,20 @@
 
   <!-- Products Displayed -->
   <div class="row">
-    <!-- convert this "buy-product-container" to a directive and use ng-repeat to populate the view -->
 
-    <!-- <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container">
+    <div class="col-md-3 col-sm-3 col-xs-12 buy-product-container" ng-repeat="vehicles in buy.car">
       <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">Toyota Supra MK3, Used, 1989, 152K miles</h3>
-        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">$ 10.000.000 USD</h4>
-      </a>
-    </div> -->
-    
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container" ng-repeat="vehicles in buy.cars" ng-switch-when="car">
-      <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">{{vehicle.carModel}}</h3>
-        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">{{vehicle.price}}</h4>
+        <h3 class="h3 buy-product-title">{{buy.cars.brand + " " + buy.cars.model + " " + buy.cars.year}}</h3>
+        <img class="buy-product-thumbnail" ng-src="{{buy.cars.image}}">
+        <h4 class="h4 buy-product-price">{{"$ " + buy.cars.price}}</h4>
       </a>
     </div>
 
-    <div class="col-md-3 col-sm-3 col-xs-6 buy-product-container" ng-repeat="vehicles in buy.bikes" ng-switch-when="motorcycle">
+    <div class="col-md-3 col-sm-3 col-xs-12 buy-product-container" ng-repeat="vehicles in buy.bike">
       <a ng-href="#/product-detail">
-        <h3 class="h3 buy-product-title">{{vehicle.motoModel}}</h3>
-        <img class="buy-product-thumbnail" src="../assets/images/vehicle-default.png">
-        <h4 class="h4 buy-product-price">{{vehicle.price}}</h4>
+        <h3 class="h3 buy-product-title">{{buy.bikes.brand + " " + buy.bikes.model + " " + buy.bikes.year}}</h3>
+        <img class="buy-product-thumbnail" ng-src="{{buy.bikes.image}}">
+        <h4 class="h4 buy-product-price">{{"$ " + buy.bikes.price}}</h4>
       </a>
     </div>
 

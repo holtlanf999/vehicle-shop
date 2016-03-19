@@ -144,4 +144,14 @@ module.exports = function (app) {
       res.send(response.body.data);
     });
   });
+
+  /*update*/
+
+  /*update user*/
+  app.put(config.mainRoute + config.userRoute, function (req, res) {
+
+  });
+
+  /*delete*/
+
 }

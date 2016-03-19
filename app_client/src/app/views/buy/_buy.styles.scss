@@ -10,6 +10,7 @@
   // border-radius: 0.5rem;
   // border: 1px solid #fff;
   margin-top: 4rem;
+
 }
 
 .buy-product-thumbnail {
@@ -20,14 +21,16 @@
 }
 
 .buy-product-title {
-  color: #000;
+  color: $main-text-color;
   margin: 2rem auto;
   padding: 0 10% 0 5%;
   position: absolute;
+  text-shadow: 1px 1px #000;
 }
 
 .buy-product-price {
-  color: #000;
+  color: $main-text-color;
   position: absolute;
   margin: -5rem 1rem 0;
+  text-shadow: 1px 1px #000;
 }

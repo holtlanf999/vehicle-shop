@@ -6,7 +6,7 @@
     var bikeService = {
       async: function() {
         var getVehicle = $http.get('//localhost:4000/main/bike').then(function (res) {
-          // console.log(res.data);
+          console.log(res.data);
           return res.data;
         })
         return getVehicle;

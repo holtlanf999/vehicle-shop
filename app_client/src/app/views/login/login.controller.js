@@ -6,16 +6,16 @@
     .controller('LoginController', ['userService',  LoginController]);
 
   /** @ngInject */
-  function LoginController(userService, lodash) {
+  function LoginController(userService, lodash, $log) {
     var vm = this;
 
     // console.log(userService);
 
     vm.enter = function() {
-      console.log('user name: ', vm.user_name);
-      console.log('service user name: ', userService.user.name + '\n');
-      console.log('Pass: ', vm.user_password);
-      console.log('service pass: ', userService.user.pass);
+      $log.log('user name: ', vm.user_name);
+      $log.log('service user name: ', userService.user.name + '\n');
+      $log.log('Pass: ', vm.user_password);
+      $log.log('service pass: ', userService.user.pass);
     }
   }
 })();

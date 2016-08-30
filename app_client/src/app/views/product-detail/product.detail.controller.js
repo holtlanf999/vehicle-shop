@@ -6,12 +6,12 @@
     .controller('productDetailController', ['userService','carService', 'bikeService', productDetailController]);
 
   /** @ngInject */
-  function productDetailController(userService, carService, bikeService) {
+  function productDetailController(userService, carService, bikeService, $log) {
     var vm = this;
 
-    // console.log('userService: ', userService);
-    console.log('carService: ', carService.car);
-    console.log('bikeService: ', bikeService);
+    $log.log('userService: ', userService);
+    $log.log('carService: ', carService.car);
+    $log.log('bikeService: ', bikeService);
     
     vm.images = 
     [

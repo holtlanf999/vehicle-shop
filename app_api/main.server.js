@@ -19,6 +19,6 @@ app.use(morgan('dev'));
 
 var mainRoute = require('./routes/main.route.js')(app);
 
-var server = app.listen(3999, function () {
-	console.log('MAIN Server is running at 127.0.0.1:3999/');
+var server = app.listen(4000, function () {
+	console.log('MAIN Server is running at localhost:4000/');
 });

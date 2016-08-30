@@ -6,7 +6,7 @@
     .controller('SellController', SellController);
 
   /** @ngInject */
-  function SellController(Upload, cloudinary, $http) {
+  function SellController(Upload, cloudinary, $http, $log) {
     var vm = this;
 
     // form options content objects...
@@ -337,40 +337,45 @@
       .progress(function (param) {
         var p = Math.round((param.loaded * 100.0) / param.total);
         var status = 'Uploading... ' + p + '%';
-        console.log(status);
+        // $log.log(status);
       })
       .success(function (data, status, headers, config) {
-        // console.log('image URL: ', data.url);
-        vehicle.images = [data.url]; /*its an array to match the model when uploaded to db*/
+        $log.debug('image URL: ', data.url);
+        $log.log('vehicle category: ' + vehicle.category);
+        vehicle.images = [data.url]; /*its an array to match the mongo model when uploaded to db*/
+
         if (vehicle.category == 'car') {
-          console.log(vehicle.category);
-          console.log(vehicle);
           $http.post('http://localhost:4000/main/car/', vehicle)
-          .then(
-            postDone, 
-            postErr
-          );
-        } else if (vehicle.category == 'bike') {
-          console.log(vehicle.category);
-          console.log(vehicle);
+          .success(function (data, status, headers, config) {
+            postDone(data, status, config);            
+          })
+          .error(function (data, status, headers, config) {
+            postErr(data, status);            
+          })
+        } else if (vehicle.category == 'motorcycle') {
           $http.post('http://localhost:4000/main/bike/', vehicle)
-          .then(
-            postDone, 
-            postErr
-          );
+          .success(function (data, status, headers, config) {
+            postDone(data, status, config);
+          })
+          .error(function (data, status, headers, config) {
+            postErr(data, status);
+          })
         }
 
-        var postDone = function () {
-          alert('vehicle post done');
+        var postDone = function (data, status, body) {
+          $log.log('req-body: ', body);
+          $log.log('success: ' + status);
+          $log.log('response: ' + data);
         }
 
-        var postErr = function () {
-          alert('vehicle post error');
+        var postErr = function (data, status) {
+          $log.error('error: ' + status);
+          $log.log('response: ' + data);
         }
 
       })
       .error(function (data, status, headers, config) {
-        console.log('error');
+        $log.error('error');
       });
 
       vehicle.category = vm.categorySelect,

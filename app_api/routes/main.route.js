@@ -148,9 +148,8 @@ module.exports = function (app) {
   /*update*/
 
   /*update user*/
-  app.put(config.mainRoute + config.userRoute, function (req, res) {
-
-  });
+  // app.put(config.mainRoute + config.userRoute, function (req, res) {
+  // });
 
   /*delete*/
 

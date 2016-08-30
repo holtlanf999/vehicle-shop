@@ -13,7 +13,7 @@
 
     $http.get('//localhost:4000/main/user')
     .then(function (res) {
-      // console.log('res.data: ', res.data);
+      console.log('res.data: ', res.data);
 
       _.forEach(res.data, function(value, key) {
         var getName = _.get(value, 'userName'),

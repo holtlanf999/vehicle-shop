@@ -6,10 +6,10 @@
     .controller('RegisterController', ['userService', RegisterController]);
 
   // /** @ngInject */
-  function RegisterController(userService) {
+  function RegisterController(userService, $log) {
     var vm = this;
     vm.submit = function () {
-      console.log('users: ', vm);
+      $log.log('users: ', vm);
     }
   }
 })();

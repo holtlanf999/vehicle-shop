@@ -17,5 +17,5 @@ app.use(morgan('dev'));
 var carRoute = require('./routes/car.route.js')(app);
 
 app.listen(port, function () {
-   console.log('CARS listening on port 4002');
+   console.log('CARS listening on port', port);
 });

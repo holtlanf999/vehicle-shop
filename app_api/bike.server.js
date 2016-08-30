@@ -12,9 +12,9 @@ mongoose.connect(config.database + config.bikeRoute);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var bikeRoute = require('./routes/bike.route.js')(app);
-
 app.use(morgan('dev'));
+
+var bikeRoute = require('./routes/bike.route.js')(app);
 
 app.listen(port, function () {
    console.log('BIKE listening on port', port);

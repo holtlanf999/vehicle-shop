@@ -6,7 +6,7 @@
     .controller('SellController', SellController);
 
   /** @ngInject */
-  function SellController(Upload, cloudinary) {
+  function SellController(Upload, cloudinary, $http) {
     var vm = this;
 
     // form options content objects...
@@ -340,15 +340,34 @@
         console.log(status);
       })
       .success(function (data, status, headers, config) {
-        console.log('image URL: ', data.url);
+        // console.log('image URL: ', data.url);
         vehicle.images = [data.url]; /*its an array to match the model when uploaded to db*/
         if (vehicle.category == 'car') {
           console.log(vehicle.category);
           console.log(vehicle);
-        } else {
+          $http.post('http://localhost:4000/main/car/', vehicle)
+          .then(
+            postDone, 
+            postErr
+          );
+        } else if (vehicle.category == 'bike') {
           console.log(vehicle.category);
           console.log(vehicle);
+          $http.post('http://localhost:4000/main/bike/', vehicle)
+          .then(
+            postDone, 
+            postErr
+          );
         }
+
+        var postDone = function () {
+          alert('vehicle post done');
+        }
+
+        var postErr = function () {
+          alert('vehicle post error');
+        }
+
       })
       .error(function (data, status, headers, config) {
         console.log('error');

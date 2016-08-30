@@ -25,7 +25,7 @@
 
 /*Yamaha Super Tenere*/
 {
-  "brand": "Yamaha",
+  "motoBrand": "Yamaha",
   "brandModel": "XT 1200 Z Super Tenere",
   "bodyType": "enduro",
   "category": "Bike",
@@ -54,7 +54,7 @@
 
 /*BMW S1000RR */
 {
-  "brand": "BMW",
+  "motoBrand": "BMW",
   "brandModel": "S1000RR",
   "bodyType": "Superbike",
   "category": "Bike",
@@ -86,7 +86,7 @@
 
 /*BMW E46 M3*/
 {
-  "brand": "BMW",
+  "carBrand": "BMW",
   "brandModel": "M3 E46",
   "bodyType": "Sports car",
   "category": "car",
@@ -158,7 +158,7 @@
 
 /*Toyota MK3 Supra*/
 {
-  "brand": "Toyota",
+  "carBrand": "Toyota",
   "brandModel": "Supra MK3",
   "bodyType": "Sports car",
   "category": "car",

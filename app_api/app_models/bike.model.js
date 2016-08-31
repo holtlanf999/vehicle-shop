@@ -47,7 +47,6 @@ var BikeSchema = new Schema({
   rebuilt: Boolean,
   sellerId: String,
   sellerName: String,
-  transmition: String,
   year: {
     type: Number,
     required: true

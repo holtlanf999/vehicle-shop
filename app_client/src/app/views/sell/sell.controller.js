@@ -218,7 +218,7 @@
       {value: 'hybrid'}
     ];
 
-    vm.bodyStyle = [
+    vm.bodyType = [
       {value: 'suv', name: 'suv'},
       {value: 'truck', name: 'truck'},
       {value: 'sedan', name: 'sedan'},
@@ -333,13 +333,13 @@
       var vehicle = {};
 
       vm.cloudObj.data.file = document.querySelector('#img-upload').files[0];
-      var uploadImg = Upload.upload(vm.cloudObj)
+      Upload.upload(vm.cloudObj)
       .progress(function (param) {
         var p = Math.round((param.loaded * 100.0) / param.total);
         var status = 'Uploading... ' + p + '%';
-        // $log.log(status);
+        $log.log(status);
       })
-      .success(function (data, status, headers, config) {
+      .success(function (data) {
         $log.debug('image URL: ', data.url);
         $log.log('vehicle category: ' + vehicle.category);
         vehicle.images = [data.url]; /*its an array to match the mongo model when uploaded to db*/
@@ -349,7 +349,7 @@
           .success(function (data, status, headers, config) {
             postDone(data, status, config);            
           })
-          .error(function (data, status, headers, config) {
+          .error(function (data, status) {
             postErr(data, status);            
           })
         } else if (vehicle.category == 'motorcycle') {
@@ -357,7 +357,7 @@
           .success(function (data, status, headers, config) {
             postDone(data, status, config);
           })
-          .error(function (data, status, headers, config) {
+          .error(function (data, status) {
             postErr(data, status);
           })
         }
@@ -374,60 +374,60 @@
         }
 
       })
-      .error(function (data, status, headers, config) {
-        $log.error('error');
+      .error(function (data) {
+        $log.error('error: ', data);
       });
 
       vehicle.category = vm.categorySelect,
       vehicle.carBrand = vm.carBrandSelect,
       vehicle.motoBrand = vm.motoBrandSelect,
-      vehicle.model = vm.model,
+      vehicle.brandModel = vm.model,
       vehicle.color = vm.color,
-      vehicle.comment = vm.comment,
+      vehicle.comments = vm.comment,
       vehicle.condition = vm.conditionSelect,
       vehicle.doors = vm.doorsSelect,
       vehicle.driveType = vm.driveType,
       vehicle.engineType = vm.engineType,
-      vehicle.displacement = vm.displacement,
+      vehicle.engineDisplacement = vm.displacement,
       vehicle.transmition = vm.trans,
-      vehicle.fuel = vm.fuelTypeSelect,
-      vehicle.bodyStyle = vm.bodyStyleSelect,
-      vehicle.milleage = vm.milleage,
-      vehicle.mods = vm.mods,
+      vehicle.fuelType = vm.fuelTypeSelect,
+      vehicle.bodyType = vm.bodyStyleSelect,
+      vehicle.mileage = vm.milleage,
+      vehicle.modifications = vm.mods,
       vehicle.plate = vm.plate,
-      vehicle.power = vm.power,
+      vehicle.powerOutput = vm.power,
       vehicle.price = vm.price,
       vehicle.rebuilt = vm.rebuilt,
       vehicle.year = vm.yearSelect,
       vehicle.extras = {};
       /*extras properties*/
-      vehicle.extras.steering = vm.pwrSteering,
-      vehicle.extras.glass = vm.glass,
-      vehicle.extras.mirrors = vm.pwrMirrors,
+      vehicle.extras.powerSteering = vm.pwrSteering,
+      vehicle.extras.tintedGlass = vm.glass,
+      vehicle.extras.powerMirrors = vm.pwrMirrors,
       vehicle.extras.ac = vm.ac,
-      vehicle.extras.rims = vm.rims,
-      vehicle.extras.halogen = vm.halogen,
-      vehicle.extras.cruise = vm.cruise,
+      vehicle.extras.luxuryRims = vm.rims,
+      vehicle.extras.halogenLights = vm.halogen,
+      vehicle.extras.cruiseControl = vm.cruise,
       vehicle.extras.esc = vm.esc,
-      vehicle.extras.reverseCam = vm.reverseCam,
-      vehicle.extras.wheelCtrls = vm.wheelCtrls,
-      vehicle.extras.memSeats = vm.memSeats,
-      vehicle.extras.travelCpu = vm.travelCpu,
+      vehicle.extras.reverseCamera = vm.reverseCam,
+      vehicle.extras.steeringWheelControls = vm.wheelCtrls,
+      vehicle.extras.memorySeats = vm.memSeats,
+      vehicle.extras.travelComputer = vm.travelCpu,
       vehicle.extras.rainSensor = vm.rainSensor,
       vehicle.extras.airbags = vm.airbags,
       vehicle.extras.alarm = vm.alarm,
       vehicle.extras.defroster = vm.defroster,
       vehicle.extras.turbo = vm.turbo,
       vehicle.extras.reverseSensors = vm.reverseSensors,
-      vehicle.extras.startBtn = vm.startBtn,
+      vehicle.extras.startButton = vm.startBtn,
       vehicle.extras.smartKey = vm.smartKey,
-      vehicle.extras.adjSteering = vm.adjSteering,
-      vehicle.extras.pwrSeats = vm.pwrSeats,
-      vehicle.extras.pwrWindows = vm.pwrWindows,
-      vehicle.extras.abs = vm.abs,
+      vehicle.extras.adjustableSteering = vm.adjSteering,
+      vehicle.extras.powreSeats = vm.pwrSeats,
+      vehicle.extras.powerWindows = vm.pwrWindows,
+      vehicle.extras.absBreaks = vm.abs,
       vehicle.extras.sunroof = vm.sunroof,
-      vehicle.extras.panRoof = vm.panRoof,
-      vehicle.extras.radioUsbAux = vm.radioUsbAux,
+      vehicle.extras.panoramicRoof = vm.panRoof,
+      vehicle.extras.usbAuxRadio = vm.radioUsbAux,
       vehicle.extras.lcdScreen = vm.lcdScreen;
     }
   }

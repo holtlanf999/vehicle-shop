@@ -10,9 +10,8 @@
     var vm = this;
 
     $log.log('userService: ', userService);
-    $log.log('carService: ', carService.car);
+    $log.log('carService: ', carService);
     $log.log('bikeService: ', bikeService);
-    
     vm.images = 
     [
       {

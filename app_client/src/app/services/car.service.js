@@ -2,11 +2,11 @@
   'use strict';
   angular
   .module('appClient')
-  .factory('carService', function($http) {
+  .factory('carService', function($http, $log) {
     var carService = {
       async: function() {
         var getVehicle = $http.get('//localhost:4000/main/car').then(function (res) {
-          console.log(res.data);
+          $log.log(res.data);
           return res.data;
         })
         return getVehicle;

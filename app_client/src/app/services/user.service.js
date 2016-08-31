@@ -4,8 +4,7 @@
   .module('appClient')
   .service('userService', ['$http', userService]);
 
-  function userService ($http, lodash) {
-
+  function userService ($http, lodash, $log) {
     var user = {};
 
     user.name = [],
@@ -13,7 +12,7 @@
 
     $http.get('//localhost:4000/main/user')
     .then(function (res) {
-      console.log('res.data: ', res.data);
+      $log.log('res.data: ', res.data);
 
       _.forEach(res.data, function(value, key) {
         var getName = _.get(value, 'userName'),
@@ -28,7 +27,7 @@
     // }),
 
     function getError (res) {
-      console.log('Error', res);
+      $log.log('Error', res);
     };
 
     return {

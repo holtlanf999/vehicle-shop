@@ -205,7 +205,6 @@
     function init() {
       carService.async().then(function (data) {
         vm.car = data;
-
         var cars = _(data).forEach(function(value) {
           vm.cars = {};
           vm.cars.brand = value.brand;
@@ -218,9 +217,7 @@
 
       bikeService.async().then(function (data) {
         vm.bike = data;
-
         var bikes = _(data).forEach(function(value) {
-
           vm.bikes = {};
           vm.bikes.brand = value.brand;
           vm.bikes.model = value.brandModel;
